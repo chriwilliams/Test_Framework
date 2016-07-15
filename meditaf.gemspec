@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
   spec.summary = %q{ Test Automation Framework}
   spec.homepage = %q{}
 
-  spec.files = Dir.glob("lib/**/*") + %w(LICENSE README.md)
   spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
