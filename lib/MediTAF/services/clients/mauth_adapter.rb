@@ -2,7 +2,7 @@ require 'mauth-client'
 require 'faraday'
 require 'faraday_middleware'
 
-module MediTAF
+module FirstFramework
   module Services
     module Clients
       # The specific resource adapter for MAuthClient. It depends on the following configurations
@@ -38,7 +38,7 @@ module MediTAF
           @mauth_client = ::MAuth::Client.new(mauth_config)
 
           @connection = Faraday.new do |builder|
-            builder.use MAuth::Faraday::MAuthClientUserAgent, "MediTAF Mauth Client Adapter"
+            builder.use MAuth::Faraday::MAuthClientUserAgent, "FirstFramework Mauth Client Adapter"
             builder.use MAuth::Faraday::RequestSigner, :mauth_client => @mauth_client
             builder.use MAuth::Faraday::ResponseAuthenticator, :mauth_client => @mauth_client if mauth_config[:authenticate_response]
             builder.use FaradayMiddleware::ParseJson, content_type: /\bjson$/
@@ -50,7 +50,7 @@ module MediTAF
         # loads a new MauthClient object for request on base_url
         # @param args [Hash] arguments
         # @option args [String] :baseurl the base url of this resource
-        # @return [MediTAF::Services::Clients::MauthClient]
+        # @return [FirstFramework::Services::Clients::MauthClient]
         # @raise [ResourceAdapterLoadError] when instantiating a new MauthClient
         def load(args)
           raise MauthClientBaseURLMissing, "supply a base url" unless args.is_a?(Hash) && args.has_key?(:baseurl)
@@ -60,10 +60,10 @@ module MediTAF
         private
 
         def mauth_config
-          raise ServiceConfigurationMissing, "services not found in configuration" unless  MediTAF::Utils::Configuration['services']
-          raise ServiceConfigurationMissing, "euresource not found in configuration" unless  MediTAF::Utils::Configuration['services']['mauth']
+          raise ServiceConfigurationMissing, "services not found in configuration" unless  FirstFramework::Utils::Configuration['services']
+          raise ServiceConfigurationMissing, "euresource not found in configuration" unless  FirstFramework::Utils::Configuration['services']['mauth']
           unless @mauth_config
-            cfg =  MediTAF::Utils::Configuration['services']['mauth']
+            cfg =  FirstFramework::Utils::Configuration['services']['mauth']
             @mauth_config = {}
             @mauth_config[:mauth_baseurl] = cfg['mauth_url']
             @mauth_config[:private_key_file] = cfg['key_file']
@@ -119,7 +119,7 @@ module MediTAF
         end
       end
 
-      class MauthClientBaseURLMissing < MediTAF::Utils::Exceptions::MediTAFException; end
+      class MauthClientBaseURLMissing < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
     end
   end
 end

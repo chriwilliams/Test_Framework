@@ -1,7 +1,7 @@
-require 'MediTAF/utils/exceptions'
+require 'FirstFramework/utils/exceptions'
 
-module MediTAF
-  # Enables MediTAF to interact with available resources. It depends on resource adapters that implement
+module FirstFramework
+  # Enables FirstFramework to interact with available resources. It depends on resource adapters that implement
   # a set of require methods. The underlying adapters have the knowledge of the type resource with which
   # it communicates.
   module Services
@@ -10,12 +10,12 @@ module MediTAF
       ResourcesMgr.new
     end
 
-    class ServiceConfigurationMissing < MediTAF::Utils::Exceptions::MediTAFException; end
-    class ResourceAdapterLoadError < MediTAF::Utils::Exceptions::MediTAFException; end
-    class ResourceAdapterMissing < MediTAF::Utils::Exceptions::MediTAFException; end
-    class ResourceAdapterMethodMissing < MediTAF::Utils::Exceptions::MediTAFException; end
-    class ResourceAdapterConfigurationMissing < MediTAF::Utils::Exceptions::MediTAFException; end
-    class ResourceAdapterRequestError < MediTAF::Utils::Exceptions::MediTAFException; end
+    class ServiceConfigurationMissing < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class ResourceAdapterLoadError < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class ResourceAdapterMissing < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class ResourceAdapterMethodMissing < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class ResourceAdapterConfigurationMissing < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class ResourceAdapterRequestError < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
   end
 end
 

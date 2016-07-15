@@ -1,15 +1,15 @@
-require 'MediTAF/utils/logger'
+require 'FirstFramework/utils/logger'
 
-module MediTAF
+module FirstFramework
   module Utils
     module Exceptions
 
-      # MediTAF Exception with logging
-      class MediTAFException < StandardError
-        include MediTAF::Utils::Logger
+      # FirstFramework Exception with logging
+      class FirstFrameworkException < StandardError
+        include FirstFramework::Utils::Logger
 
         # @param message [String] error message.
-        def initialize(message = 'MediTAF Exception') # Default Message
+        def initialize(message = 'FirstFramework Exception') # Default Message
           log.error message
           super(message)
         end

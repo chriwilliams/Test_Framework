@@ -2,7 +2,7 @@
 
 require_relative '../ui/application'
 
-module MediTAF
+module FirstFramework
   module UI
     # Manages all of the applications in the applications root directory
     class Applications

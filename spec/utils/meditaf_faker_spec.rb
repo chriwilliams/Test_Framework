@@ -1,10 +1,10 @@
 require_relative '../spec_helper'
 
-describe MediTAF::Utils::MediTAFFaker do
+describe FirstFramework::Utils::FirstFrameworkFaker do
 
   context 'Address' do
     before (:all) do
-      @AddressSpec = MediTAF::Utils::MediTAFFaker
+      @AddressSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     #Verifying each generated string is not empty
@@ -80,7 +80,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Code' do
     before (:all) do
-      @CodeSpec = MediTAF::Utils::MediTAFFaker
+      @CodeSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     #Verifying the codes generated are not empty strings
@@ -105,7 +105,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Name' do
     before (:all) do
-      @NameSpec = MediTAF::Utils::MediTAFFaker
+      @NameSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
 
@@ -138,7 +138,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Number' do
     before (:all) do
-      @NumberSpec = MediTAF::Utils::MediTAFFaker
+      @NumberSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     #Verifying each generated string is not empty
@@ -158,7 +158,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Random' do
     before (:all) do
-      @RandomSpec = MediTAF::Utils::MediTAFFaker
+      @RandomSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     it "should verify the generated prime number is not an empty string." do
@@ -176,7 +176,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Faker' do
     before (:all) do
-      @faker = MediTAF::Utils::MediTAFFaker
+      @faker = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     #Verifying each generated string is not empty
@@ -202,7 +202,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'Timestamp' do
     before (:all) do
-      @TimeSpanSpec = MediTAF::Utils::MediTAFFaker
+      @TimeSpanSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     # Verifying that string output is not empty
@@ -240,7 +240,7 @@ describe MediTAF::Utils::MediTAFFaker do
 
   context 'UID' do
     before (:all) do
-      @UIDSpec = MediTAF::Utils::MediTAFFaker
+      @UIDSpec = FirstFramework::Utils::FirstFrameworkFaker
     end
 
     it "should verify the generated uid string is not an empty string." do

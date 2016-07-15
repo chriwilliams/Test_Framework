@@ -1,14 +1,14 @@
 $:.unshift File.dirname(__FILE__)
 
-module MediTAF
+module FirstFramework
   def self.root
     File.expand_path '../..', __FILE__
   end
 end
 
-require 'MediTAF/version'
-require 'MediTAF/services'
-require 'MediTAF/ui'
-require 'MediTAF/utils/meditaf_faker'
-require 'MediTAF/utils/sticky'
-require 'MediTAF/utils/mail'
+require 'FirstFramework/version'
+require 'FirstFramework/services'
+require 'FirstFramework/ui'
+require 'FirstFramework/utils/FirstFramework_faker'
+require 'FirstFramework/utils/sticky'
+require 'FirstFramework/utils/mail'

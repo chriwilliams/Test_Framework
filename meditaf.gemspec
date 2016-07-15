@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'MediTAF/version'
+require 'FirstFramework/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'First_Framework'
-  spec.version = MediTAF::VERSION
+  spec.version = FirstFramework::VERSION
   spec.authors = ['Medidata Test Automation Framework Team']
   spec.email = ['chriwilliams_23@yahoo.com']
   spec.description = %q{ Test Automation Framework}

@@ -1,11 +1,11 @@
 require_relative '../spec_helper'
 
-describe MediTAF::Utils::Sticky do
+describe FirstFramework::Utils::Sticky do
   before (:all) do
-    $config = MediTAF::Utils::Configuration.new
+    $config = FirstFramework::Utils::Configuration.new
   end
 
-  subject { MediTAF::Utils::Sticky.new('default_value') }
+  subject { FirstFramework::Utils::Sticky.new('default_value') }
 
   context '#[]' do
     before (:each) { subject['test_key'] = 'test_value' }
@@ -15,7 +15,7 @@ describe MediTAF::Utils::Sticky do
     end
 
     it 'should raise an error for an unknown key' do
-      expect { subject['unkown_key'] }.to raise_error MediTAF::Utils::StickyKeyNotFound
+      expect { subject['unkown_key'] }.to raise_error FirstFramework::Utils::StickyKeyNotFound
     end
 
     context "#get_value" do
@@ -31,16 +31,16 @@ describe MediTAF::Utils::Sticky do
       end
 
       it 'should return a string with the values of the known keys' do
-        sticky = MediTAF::Utils::Sticky.new
+        sticky = FirstFramework::Utils::Sticky.new
         sticky['test_key_1'] = 'test_value_1'
         sticky['test_key_2'] = 'test_value_2'
         expect(sticky.get_value 'test_key_1 test_key_2').to eq 'test_value_1 test_value_2'
       end
 
       it 'should raise an error on an unknown key' do
-        sticky = MediTAF::Utils::Sticky.new
+        sticky = FirstFramework::Utils::Sticky.new
         sticky['test_key_1'] = 'test_value_1'
-        expect { sticky.get_value 'test_key_1 test_key_2' }.to raise_error MediTAF::Utils::StickyKeyNotFound
+        expect { sticky.get_value 'test_key_1 test_key_2' }.to raise_error FirstFramework::Utils::StickyKeyNotFound
       end
     end
   end

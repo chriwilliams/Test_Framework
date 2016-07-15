@@ -1,4 +1,4 @@
-module MediTAF
+module FirstFramework
   module Services
     # Reserved namespace for specific, underlying resource adapters
     module Clients

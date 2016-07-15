@@ -1,7 +1,7 @@
 require 'gmail'
-require 'MediTAF/utils/exceptions'
+require 'FirstFramework/utils/exceptions'
 
-module MediTAF
+module FirstFramework
   module Utils
     module Email
       class Mail < Gmail::Client::Base
@@ -105,13 +105,13 @@ module MediTAF
         end
       end
 
-      class InviteEmailNotFoundError < MediTAF::Utils::Exceptions::MediTAFException;
+      class InviteEmailNotFoundError < FirstFramework::Utils::Exceptions::FirstFrameworkException;
       end
-      class InviteBodyNotFoundError < MediTAF::Utils::Exceptions::MediTAFException;
+      class InviteBodyNotFoundError < FirstFramework::Utils::Exceptions::FirstFrameworkException;
       end
-      class URLNotFoundError < MediTAF::Utils::Exceptions::MediTAFException;
+      class URLNotFoundError < FirstFramework::Utils::Exceptions::FirstFrameworkException;
       end
-      class SubjectNil < MediTAF::Utils::Exceptions::MediTAFException;
+      class SubjectNil < FirstFramework::Utils::Exceptions::FirstFrameworkException;
       end
     end
   end

@@ -7,7 +7,7 @@ module Common
 
     # def take_screenshot
     #   filename = Shamus.current.current_step.add_inline_asset(".png") if defined? Shamus
-    #   filename ||= './meditaf_run.log'
+    #   filename ||= './FirstFramework_run.log'
     #   self.save_screenshot(filename)
     # end
 

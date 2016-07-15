@@ -2,9 +2,9 @@ require_relative '../spec_helper'
 require 'capybara'
 require 'site_prism'
 
-describe MediTAF::UI do
+describe FirstFramework::UI do
   before (:all) do
-    $config = MediTAF::Utils::Configuration.new
+    $config = FirstFramework::Utils::Configuration.new
 
     # Configure Capybara
     capybara_config = $config['ui']['capybara']
@@ -27,21 +27,21 @@ describe MediTAF::UI do
       config.use_implicit_waits = true
     end
 
-    @applications = MediTAF::UI.new
+    @applications = FirstFramework::UI.new
   end
 
   it 'should instantiate an Applications object' do
-    expect(@applications).to be_a MediTAF::UI::Applications
+    expect(@applications).to be_a FirstFramework::UI::Applications
   end
 
   it 'should load application imedidata' do
     @applications.imedidata
     expect(@applications.apps).to include :imedidata
-    expect(@applications.imedidata).to be_a MediTAF::UI::Application
+    expect(@applications.imedidata).to be_a FirstFramework::UI::Application
   end
 
   it 'should raise an error for unknown application' do
-    expect { @applications.xyz }.to raise_error MediTAF::UI::AppLoadError
+    expect { @applications.xyz }.to raise_error FirstFramework::UI::AppLoadError
   end
 
   it 'should load imedidata login page' do
@@ -51,7 +51,7 @@ describe MediTAF::UI do
   end
 
   it 'should raise an error for unknown page' do
-    expect { @applications.imedidata.xyz }.to raise_error MediTAF::UI::PageLoadError
+    expect { @applications.imedidata.xyz }.to raise_error FirstFramework::UI::PageLoadError
   end
 
   it 'imedidata.login page should respond to username, password, submit, and login' do

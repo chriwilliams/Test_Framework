@@ -105,14 +105,14 @@ And /^I append "(.*)" to "(.*)" and print log$/ do |value, var|
 end
 
 Given(/^Invitation email is delivered to user inbox$/) do
-  $mail = MediTAF::Utils::Email::Mail.new($config['utils']['gmail']['gmail_user_addr'], $config['utils']['gmail']['gmail_user_password'])
+  $mail = FirstFramework::Utils::Email::Mail.new($config['utils']['gmail']['gmail_user_addr'], $config['utils']['gmail']['gmail_user_password'])
   $mail.send_mail $config['utils']['gmail']['gmail_user_addr'], "You have been invited to join iMedidata", File.open(Dir.glob(File.join("**", "mail_invite_body.html")).first, 'rb').read
   sleep 15
 end
 
 Given(/^An invitation email is delivered to the inbox of the following users:$/) do |table|
   # table is a table.hashes.keys # => [:User, :Email]
-  $mail = MediTAF::Utils::Email::Mail.new($config['utils']['gmail']['gmail_user_addr'], $config['utils']['gmail']['gmail_user_password'])
+  $mail = FirstFramework::Utils::Email::Mail.new($config['utils']['gmail']['gmail_user_addr'], $config['utils']['gmail']['gmail_user_password'])
   $email_addr = {}
 
   table.hashes.each do | data |

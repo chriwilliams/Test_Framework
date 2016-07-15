@@ -16,7 +16,7 @@
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
-  relpath = '../MediTAF/';
+  relpath = '../FirstFramework/';
   framesUrl = "frames.html#!file.README.html";
 </script>
 
@@ -62,20 +62,20 @@
     <iframe id="search_frame"></iframe>
 
    
-<h1>MediTAF  Design Specification</h1>
+<h1>FirstFramework  Design Specification</h1>
 
 <h2><a name="pgfId-1080142"></a>Introduction</h2>
 
-<p class="MsoNormal" ><a name="pgfId-1080160"></a><a name="pgfId-998346"></a><span >MediTAF 
+<p class="MsoNormal" ><a name="pgfId-1080160"></a><a name="pgfId-998346"></a><span >FirstFramework 
 is a generic ruby-based test automation framework intended to allow 
 automation engineers and testers to automate end-to-end integration tests for distributed systems. 
-Specifically, MediTAF will allow testers to automate using two different interfaces i.e. UI and web services..</span></p>
+Specifically, FirstFramework will allow testers to automate using two different interfaces i.e. UI and web services..</span></p>
 
 <h2>How to Use this Design Specification Site</h2>
 
 <p class="MsoNormal" ><a name="pgfId-1080248"></a><span >This site
 contains an automatically generated compendium of the main programming
-constituents of the MediTAF application code. Elements of the code
+constituents of the FirstFramework application code. Elements of the code
 that are documented here include class, method, module, and attribute
 definitions.</span></p>
 
@@ -140,22 +140,22 @@ identify and understand these attributes.</span></p>
 
 <h2><a name="_Toc76290724"></a><a name="_Toc219628627"></a><a name="pgfId-1085401"></a>Software Overview</h2>
 
-<p class="MsoNormal"><span lang="EN-GB" >MediTAF 2014.1.0 is an automation framework with libraries
+<p class="MsoNormal"><span lang="EN-GB" >FirstFramework 2014.1.0 is an automation framework with libraries
  used in developing and automating end to end test cases.
  This framework helps in automating web based applications in Medidata.
- MediTAF has the following modules : </span></p>
+ FirstFramework has the following modules : </span></p>
 
 <p<span lang="EN-GB" >•	UI testing: 
-MediTAF uses Selenium to allow users to write tests for the web user interface. 
+FirstFramework uses Selenium to allow users to write tests for the web user interface. 
 For Selenium implementation, the framework uses the Page Object pattern. 
 The Page Object pattern represents screens of a web application in a series of objects
 and encapsulates the features represented by a web page. It reduces the duplication of code 
 and improves the maintainability of the automated tests. 
-MediTAF uses a ruby gem called site_prism (an extension to Capybara)
+FirstFramework uses a ruby gem called site_prism (an extension to Capybara)
 as an interface to selenium to implement the Page Object pattern.</span></p>
 
 <p<span lang="EN-GB" >•	Services testing:
-MediTAF provides an interface to connect with the services. 
+FirstFramework provides an interface to connect with the services. 
 Testers will be able to make calls to the service APIs, 
 save results and perform comparisons with the expected results. 
 Framework provides wrapper classes so nothing changes in the implementation. 
@@ -167,16 +167,16 @@ The framework has an exception handler with multiple severity levels that can be
 <h2>Software Architecture</h2>
 
 <p class="MsoBodyText">Medidata
-MediTAF is a ruby based Test Framework which is used by internal users , MediTAF is released as a internal gem and can be installed from github. MediTAF provides a way to automate the Web based applications and 
-interact with the Medidata services. MediTAF uses the page object model which helps in arranging the web elements and functions related to them . Testing resources like Page Objects , Step defnintions and Feature files
-are stored in MIST ( mdsol git repo ) . MediTAF is integrated with MIST using cucumber framework.MediTAF can be installed from MIST by using the bundle installer. The user can simply define the testing resources in MIST and use MediTAF to automate tests.
-MediTAF is configurable using a config file , which helps users to execute automation tests in different environments.
+FirstFramework is a ruby based Test Framework which is used by internal users , FirstFramework is released as a internal gem and can be installed from github. FirstFramework provides a way to automate the Web based applications and 
+interact with the Medidata services. FirstFramework uses the page object model which helps in arranging the web elements and functions related to them . Testing resources like Page Objects , Step defnintions and Feature files
+are stored in MIST ( mdsol git repo ) . FirstFramework is integrated with MIST using cucumber framework.FirstFramework can be installed from MIST by using the bundle installer. The user can simply define the testing resources in MIST and use FirstFramework to automate tests.
+FirstFramework is configurable using a config file , which helps users to execute automation tests in different environments.
 </p>
 
 
 <h2><span>Architecture Diagram</span></h2>
 
-<img width="612" height="784" src=MediTAFArchitectureDiagram.png>
+<img width="612" height="784" src=FirstFrameworkArchitectureDiagram.png>
 <br>
 
 

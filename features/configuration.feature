@@ -3,7 +3,7 @@ Feature: Automation Framework Configuration Files
   I should be able to load and access configuration files
 
  # Background:
- #    Given I have meditaf_config.yml file
+ #    Given I have FirstFramework_config.yml file
  #    And I have other config.yml file
  #    When I initialize the Configuration
  #    Then I should have access to all Configuration items

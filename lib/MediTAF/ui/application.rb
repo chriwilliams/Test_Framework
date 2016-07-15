@@ -1,6 +1,6 @@
 require 'active_support/core_ext/string/inflections'
 
-module MediTAF
+module FirstFramework
   module UI
     # Manages all of the application's pages in the application's root directory
     class Application
@@ -42,7 +42,7 @@ module MediTAF
       private
 
       # @param page [Symbol] the page name as a symbol
-      # @return [MediTAF::UI:BasePage] the newly accessed page
+      # @return [FirstFramework::UI:BasePage] the newly accessed page
       # @raise [PageLoadError] when manager cannot fully load the requested page
       def load_page(page)
         raise "File #{@app_root}/#{page.to_s}.rb not found" unless Dir["#{@app_root}/#{page.to_s}.rb"].detect do |f|
