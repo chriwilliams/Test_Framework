@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Design Specification
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../MediTAF/';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+   
+<h1>MediTAF  Design Specification</h1>
+
+<h2><a name="pgfId-1080142"></a>Introduction</h2>
+
+<p class="MsoNormal" ><a name="pgfId-1080160"></a><a name="pgfId-998346"></a><span >MediTAF 
+is a generic ruby-based test automation framework intended to allow 
+automation engineers and testers to automate end-to-end integration tests for distributed systems. 
+Specifically, MediTAF will allow testers to automate using two different interfaces i.e. UI and web services..</span></p>
+
+<h2>How to Use this Design Specification Site</h2>
+
+<p class="MsoNormal" ><a name="pgfId-1080248"></a><span >This site
+contains an automatically generated compendium of the main programming
+constituents of the MediTAF application code. Elements of the code
+that are documented here include class, method, module, and attribute
+definitions.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1103698"></a><span >Three program
+objects display in the DS web page: classes, methods, and files. Each object
+collection appears in a separate window where the names of the items are
+grouped hierarchically.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1103730"></a><span >That is, class
+is the highest member of the hierarchy, then method and finally file. The names
+of the items are also arranged alphabetically in the relevant window.</span></p>
+
+<h3><a name="pgfId-1082742"></a>Classes</h3>
+
+<p class="MsoNormal" ><a name="pgfId-1103723"></a><span >When you click
+the name of the class in the Classes window, the methods in that class
+immediately display. </span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1103760"></a><span >Each class is
+linked to the methods that implement behaviors that operate on the internal
+state of the class. These include public and protected instance methods.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1101059"></a><span >To view a class
+and its methods, <a name="pgfId-1085476"></a>click a link for the class name to
+display a list of the names of methods that comprise the class.</span></p>
+
+<h3><a name="pgfId-1082806"></a>Methods</h3>
+
+<p class="MsoNormal" ><a name="pgfId-1085467"></a><span >Methods display
+when you click the name of a class. The methods that display are all public and
+private instance that operate on the internal state of the class.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1085627"></a><span >You can view the
+method either by clicking the class name in which the method resides, where it
+appears along with the other methods in the class, or by clicking the name of
+the method in the Methods window.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1085579"></a><span >You can also
+view the source code for the method. The Ruby file name displays, along with
+its directory tree. Also, the beginning line number for the method as it exists
+in the class displays.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1085533"></a><span >To view a method
+and its source code, do the following:</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1085514"></a><span >1.
+Click the name of the method to display developer comments.</span></p>
+
+<p class="MsoNormal" ><a name="pgfId-1085525"></a><span >2.
+Click [Show Source] to view the program code for the method.</span></p>
+
+<h3><a name="pgfId-1085546"></a>Attributes</h3>
+
+<p class="MsoNormal" ><a name="pgfId-1101088"></a><span >When used in a
+class, class attributes appear at the top of method listing section of the
+class window.</span></p>
+
+<p class="MsoNormal" ><span >The instance variables of an object
+include its attributes. These are the particulars that distinguish one object
+from other objects that have the same class. Therefore, one must be able to
+identify and understand these attributes.</span></p>
+
+<h2><a name="_Toc76290724"></a><a name="_Toc219628627"></a><a name="pgfId-1085401"></a>Software Overview</h2>
+
+<p class="MsoNormal"><span lang="EN-GB" >MediTAF 2014.1.0 is an automation framework with libraries
+ used in developing and automating end to end test cases.
+ This framework helps in automating web based applications in Medidata.
+ MediTAF has the following modules : </span></p>
+
+<p<span lang="EN-GB" >•	UI testing: 
+MediTAF uses Selenium to allow users to write tests for the web user interface. 
+For Selenium implementation, the framework uses the Page Object pattern. 
+The Page Object pattern represents screens of a web application in a series of objects
+and encapsulates the features represented by a web page. It reduces the duplication of code 
+and improves the maintainability of the automated tests. 
+MediTAF uses a ruby gem called site_prism (an extension to Capybara)
+as an interface to selenium to implement the Page Object pattern.</span></p>
+
+<p<span lang="EN-GB" >•	Services testing:
+MediTAF provides an interface to connect with the services. 
+Testers will be able to make calls to the service APIs, 
+save results and perform comparisons with the expected results. 
+Framework provides wrapper classes so nothing changes in the implementation. 
+The framework also allows for future expansion to other services without affecting existing implementations..</span></p>
+
+</span></span><span lang="EN-GB" >•	Logging and Exception Handling:
+The framework has an exception handler with multiple severity levels that can be logged to a configured file. </span></p>
+
+<h2>Software Architecture</h2>
+
+<p class="MsoBodyText">Medidata
+MediTAF is a ruby based Test Framework which is used by internal users , MediTAF is released as a internal gem and can be installed from github. MediTAF provides a way to automate the Web based applications and 
+interact with the Medidata services. MediTAF uses the page object model which helps in arranging the web elements and functions related to them . Testing resources like Page Objects , Step defnintions and Feature files
+are stored in MIST ( mdsol git repo ) . MediTAF is integrated with MIST using cucumber framework.MediTAF can be installed from MIST by using the bundle installer. The user can simply define the testing resources in MIST and use MediTAF to automate tests.
+MediTAF is configurable using a config file , which helps users to execute automation tests in different environments.
+</p>
+
+
+<h2><span>Architecture Diagram</span></h2>
+
+<img width="612" height="784" src=MediTAFArchitectureDiagram.png>
+<br>
+
+
+<p class="MsoNormal" ><a name="pgfId-1103767"></a><a name="pgfId-1103830"></a><a name="pgfId-1010989"></a><span >Copyright © 2014 Medidata Solutions
+Worldwide</span></p>
+
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
