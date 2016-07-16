@@ -17,5 +17,6 @@ group :test do
   gem 'rspec-core', '< 4.0'
   gem 'rspec-expectations', '< 4.0'
   gem 'rake', '~> 10.5'
+  gem 'cucumber', '~> 2.4'
   #gem 'shamus', :git => "#{github}:mdsol/shamus.git", :tag => '0.11.2'
 end
