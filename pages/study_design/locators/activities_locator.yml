@@ -1,0 +1,115 @@
+Activities:
+  Search:
+    box:
+      selector: '#activities-search'
+    input-field:
+      selector: '#activities-search'
+  Empty Search:
+    box:
+      selector: '#activities-search[placeholder="Enter search term"]'
+  Search Results:
+    container:
+      selector: '#activity-search-results div[scrollable-table="activities"]'
+  No Activities:
+    container:
+      selector: '#activity-details div.empty-basket.ng-scope'
+  No Activity Results:
+      container:
+        selector: '#no-activity-results-from-search'
+  Activity Results:
+    container:
+      selector: '#activity-search-results'
+    table:
+      selector: '#activity-search-results-table'
+  Added Activities:
+    container:
+      selector: '#activity-details div.results-panel.added-results'
+    table:
+      selector: '#added-activities'
+
+No Activities:
+  Message:
+    label:
+      selector: '#no-activities-added-label'
+
+No Activity Results:
+  Message:
+    label:
+      selector: '#no-activity-results-from-search em'
+  Close:
+    button:
+      selector: '#activity-search-close div.btn'
+
+Activity Search:
+  Search:
+    input-field:
+      selector: '#activities-search'
+  Hint:
+    text:
+      selector: 'span.activity-search-hint.ng-binding.ng-scope'
+
+Activity Results:
+  Table:
+    container:
+      selector: '#activity-search-results-table'
+  Row Activity:
+    items:
+      selector: '#activity-search-results-table tr'
+    Check: 'td:nth-child(1) div.added-indicator'
+    Count: 'td:nth-child(1) sub'
+  Indicator:
+    header:
+      selector: '#activity-search-results-table th:nth-child(1) div.th-inner'
+    column:
+      selector: '#activity-search-results-table td:nth-child(1)'
+    check:
+      selector: '#activity-search-results-table td:nth-child(1) div.added-indicator'
+    count:
+      selector: '#activity-search-results-table td:nth-child(1) sub'
+  'Name & Description':
+    header:
+      selector: '#activity-search-results-table div.th-inner[title="Name &amp; Description"]'
+    column:
+      selector: '#activity-search-results-table td:nth-child(2)'
+  Code:
+    header:
+      selector: '#activity-search-results-table div.th-inner[title="Code"]'
+    column:
+      selector: '#activity-search-results-table td:nth-child(3)'
+  'Protocol Usage %':
+    header:
+      selector: '#activity-search-results-table div.th-inner[title="Protocol Usage %"]'
+    column:
+      selector: '#activity-search-results-table td:nth-child(3)'
+  Close:
+    button:
+      selector: '#activity-search-close div.btn.ng-binding'
+
+
+Added Activities:
+  Table Header:
+    container:
+      selector: '#added-activities-header'
+  Table:
+    container:
+      selector: '#added-activities'
+  Row Activity:
+    Code: 'td:nth-child(1)'
+    Activity Name: 'td:nth-child(2)'
+    Delete Button: 'td:nth-child(3) a.activity-remove'
+    items:
+      selector: '#added-activities tr'
+  Code:
+    header:
+      selector: '#added-activities-header th.activity-code'
+    column:
+      selector: '#added-activities td:nth-child(1)'
+  'Activity Name':
+    header:
+      selector: '#added-activities-header th.activity-name'
+    column:
+      selector: '#added-activities td:nth-child(2)'
+  Delete Activity:
+    button:
+      selector: '#added-activities td:nth-child(3) a.activity-remove'
+

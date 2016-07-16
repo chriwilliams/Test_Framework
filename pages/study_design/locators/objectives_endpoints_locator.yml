@@ -1,0 +1,288 @@
+"Objectives/Endpoints":
+  Objectives:
+    headers:
+      element: "objectives_endpoints_objectives_headers"
+      selector: "#objectives-endpoints h5.objectiveTypeHeader"
+    containers:
+      element: "objectives_endpoints_objectives_containers"
+      selector: "#objectives-endpoints ol.obj-list"
+    list:
+      element: "objectives_endpoints_objectives_list"
+      selector: "#objectives-endpoints li.obj-item"
+    text:
+      element: "objectives_endpoints_objectives_container"
+      selector: 'p[id^="objective-description"]'
+  Endpoints:
+    list:
+      element: "objectives_endpoints_endpoints_list"
+      selector: 'li[id^="objective"] li.endpoint-item'
+  New Objective:
+    button:
+      element: "objectives_endpoints_new_objective_button"
+      selector: "#objectives-endpoints div.panel-body button.addObjTop"
+    label:
+      element: "objectives_endpoints_new_objective_button_label"
+      selector: "#new-objective-link div"
+  "Editable Objective":
+    container:
+      element: "objectives_endpoints_add_editable_objective_container"
+      selector: 'form[name="add-new-objective-form"].active'
+    new container:
+      element: "objectives_endpoints_add_new_editable_objective_container"
+      selector: 'form[name="add-new-objective-form"].active'
+    first container:
+      element: "objectives_endpoints_add_first_editable_objective_container"
+      selector: "#addFirstObjContainer .active"
+  "Active Objective":
+      container:
+        element: "objectives_endpoints_active_objective_container"
+        selector: 'li[id^="objective"].obj-item.active'
+
+
+Objective:
+  Primary: "#objective_type-primary_objective_container li.obj-item"
+  Secondary: "#objective_type-secondary_objective_container li.obj-item"
+  Tertiary: "#objective_type-tertiary_objective_container li.obj-item"
+  Other: "#objective_type-other_objective_container li.obj-item"
+  Header:
+    text:
+      selector: "h5.objectiveTypeHeader"
+      element: "objective_header_text"
+  First Endpoint:
+    container:
+      selector: 'div[id^="first-objective"].addEndpoint'
+      element: "objective_first_endpoint_container"
+    button:
+      selector: 'button.addFirstEndpoint'
+      element: "objective_first_endpoint_button"
+    label:
+      selector: "button.addFirstEndpoint"
+      element: "objective_first_endpoint_button_label"
+  Endpoints:
+    list:
+      selector: 'ul.endpoints-list'
+      element: 'objective_endpoints_list'
+    items:
+      selector: 'ul.endpoints-list li.endpoint-item'
+      element: 'objective_endpoints_items'
+    link:
+      selector: 'div.endpoint-link a'
+      element: "objective_endpoints_item"
+    toggle-button:
+      selector: 'div.endpoint-link a span'
+      element: "objective_endpoints_toggle_button"
+      state:
+        on: "fa fa-caret-right"
+        off: "fa fa-caret-down"
+  New Endpoint:
+    container:
+      selector: 'div[id^="objective"].addEndpoint'
+      element: "objective_new_endpoint_container"
+    button:
+      selector: 'ul.endpoints-list button.addEndpoint'
+      element: "objective_new_endpoint_button"
+    label:
+      selector: 'ul.endpoints-list button.addEndpoint'
+      element: "objective_new_endpoint_button_label"
+  Description:
+    text:
+      selector: 'p[id^="objective-description"]'
+      element: "objective_description_text"
+  Action:
+    button:
+      selector: 'button[data-toggle="dropdown"].dropdown-toggle'
+      element: "objective_action_button"
+    dropdown:
+      selector: "div.actions ul.dropdown-menu"
+      element: "objective_action_dropdown"
+    section:
+      selector: "div.actions ul.dropdown-menu"
+      element: "objective_action_section"
+    list:
+      selector: "div.actions ul.dropdown-menu li"
+      element: "objective_action_dropdown_list"
+  Edit:
+    button:
+      selector: 'div.actions ul.dropdown-menu li a.editObj'
+      element: "objective_edit_button"
+  Delete:
+    button:
+      selector: "div.actions ul.dropdown-menu li a.deleteObj"
+      element: "objective_delete_button"
+
+Objective Action:
+  Edit:
+    button:
+      selector: 'div.actions ul.dropdown-menu li a.editObj'
+      element: "objective_action_edit_button"
+  Delete:
+    button:
+      selector: "div.actions ul.dropdown-menu li a.deleteObj"
+      element: "objective_action_delete_button"
+
+Editable Objective:
+  Container:
+  Action:
+  Description:
+    content:
+      selector: 'div[id^="objective-description"] p'
+      element: "editable_objective_description_content"
+    action:
+      selector: 'div[id^="objective-description"] p'
+      element: "editable_objective_description_action"
+    message:
+      selector: 'div[id^="objective-description"] p'
+      element: "editable_objective_description_message"
+  Add Objective:
+    form:
+      selector: 'form[name="add-new-objective-form"].active'
+      element: "editable_objective_add_objective_form"
+    header:
+      selector: 'form[name="add-new-objective-form"].active>p'
+      element: "editable_objective_add_objective_header"
+  First Objective:
+    header:
+      selector: "#addFirstObjContainer .active>p"
+      element: "editable_objective_first_objective_header"
+  New Objective:
+    header:
+      selector: 'form[name="add-new-objective-form"].active>p'
+      element: "editable_objective_new_objective_header"
+  Edit Objective:
+    form:
+      selector: 'li.active form[name="edit-objective-form"]'
+      element: "editable_objective_edit_objective_form"
+    header:
+      selector: 'li.active form[name="edit-objective-form"]>p'
+      element: "editable_objective_edit_objective_header"
+
+
+Objective Form:
+  Edit Container: 'li.active form[name="edit-objective-form"]'
+  Add Container: 'form[name="add-new-objective-form"].active'
+  Objective Type:
+    dropdown:
+      selector: "select.form-control"
+      element: "objective_form_objective_type_dropdown"
+  Save:
+    button:
+      selector: "button.saveObj"
+      element: "objective_form_save_button"
+    label:
+      selector: "button.saveObj"
+      element: "objective_form_save_button_label"
+  Disabled Save:
+    button:
+      selector: 'button[disabled="disabled"].saveObj'
+      element: "objective_form_save_button_disabled"
+  Cancel:
+    button:
+      selector: ".btn.cancel.ng-binding"
+      element: "objective_form_save_cancel"
+    label:
+      selector: ".btn.cancel.ng-binding"
+      element: "objective_form_cancel_button_disabled"
+  Editor:
+    iframe:
+      selector: "div.mce-tinymce.mce-panel.mce-container div.mce-container-body.mce-stack-layout div.mce-edit-area.mce-container iframe"
+      element: "objective_form_editor_iframe"
+    tinymce:
+      selector: "#tinymce"
+      element: "objective_form_editor_tinymce"
+    toolbar:
+      selector: "div.mce-tinymce.mce-panel.mce-container div.mce-toolbar-grp.mce-container.mce-panel.mce-first.mce-stack-layout-item"
+      element: "objective_form_editor_toolbar"
+  Toolbars:
+
+
+No Objectives:
+  "Add Objective":
+    link:
+      element: "no_objectives_add_objective_link"
+      selector: "#new-objective-link"
+    label:
+      element: "no_objectives_add_objective_label"
+      selector: "#new-objective-link div"
+
+
+Editable Endpoint:
+  Add Endpoint:
+    container:
+      element: "editable_endpoint_add_endpoint_container"
+      selector: 'form[name="add-new-endpoint-form"].active'
+    header:
+      element: "editable_endpoint_add_endpoint_header"
+      selector: 'form[name="add-new-endpoint-form"].active>p'
+  Edit Endpoint:
+    container:
+      element: "editable_endpoint_edit_endpoint_container"
+      selector: 'li[id$="editor-container"].edit-endpoint-container'
+    header:
+      element: "editable_endpoint_edit_endpoint_header"
+      selector: 'li[id$="editor-container"].edit-endpoint-container p'
+  First Endpoint:
+    container:
+      element: "editable_endpoint_first_endpoint_container"
+      selector: 'form[name="add-new-endpoint-form"].active'
+    header:
+      element: "editable_endpoint_first_endpoint_header"
+      selector: 'form[name="add-new-endpoint-form"].active>p'
+  New Endpoint:
+    container:
+      element: "editable_endpoint_new_endpoint_container"
+      selector: 'form[name="add-new-endpoint-form"].active'
+    header:
+      element: "editable_endpoint_new_endpoint_header"
+      selector: 'form[name="add-new-endpoint-form"].active>p'
+
+
+Endpoint Form:
+  Edit Container: 'div[id$="editor-container"]'
+  Add Container: 'form[name="add-new-endpoint-form"].active'
+  Endpoint Type:
+    dropdown:
+      element: "endpoint_form_endpoint_type_dropdown"
+      selector: 'select[name="endpoint-type"].form-control'
+  Endpoint Subtype:
+    dropdown:
+      element: "endpoint_form_endpoint_subtype_dropdown"
+      selector: 'select[name="endpoint-subtype"].form-control'
+  Save:
+    button:
+      selector: "button.saveEndpoint"
+      element: "endpoint_form_endpoint_save_button"
+    label:
+      selector: "button.saveEndpoint"
+      element: "endpoint_form_endpoint_save_button_label"
+  Disabled Save:
+    button:
+      selector: 'button[disabled="disabled"].saveEndpoint'
+      element: "endpoint_form_endpoint_disabled_save_button"
+  Cancel:
+    button:
+      selector: "button.btn.cancel.ng-binding"
+      element: "endpoint_form_endpoint_cancel_button"
+    label:
+      selector: "button.btn.cancel.ng-binding"
+      element: "endpoint_form_endpoint_cancel_button_label"
+  Editor:
+    iframe:
+      selector: "div.mce-tinymce.mce-panel.mce-container div.mce-container-body.mce-stack-layout div.mce-edit-area.mce-container iframe"
+      element: "endpoint_form_editor_iframe"
+    tinymce:
+      selector: "#tinymce"
+      element: "endpoint_form_editor_tinymce"
+    toolbar:
+      selector: "div.mce-tinymce.mce-panel.mce-container div.mce-toolbar-grp.mce-container.mce-panel.mce-first.mce-stack-layout-item"
+      element: "endpoint_form_editor_toolbar"
+  Toolbars:
+
+Objectives Toolbar:
+  Bold:
+    button:
+      selector: "#mceu_2>button"
+      element: "objectives_toolbar_bold_button"
+  Paste:
+    button:
+      selector:
+      element:

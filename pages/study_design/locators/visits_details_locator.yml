@@ -1,0 +1,60 @@
+Visits Details:
+  New Visit:
+    button:
+      selector: '#newstudy-event-button'
+  Visits Quantity:
+    input-field:
+      selector: '#newstudy-event-quantity input.form-control'
+  Visits:
+    panel:
+      selector: '#study-events-container'
+  'Encounter Type':
+    header:
+      selector: '#encounter-type-header'
+    form:
+      selector: '#study-events-visits tr td.first'
+    dropdown:
+      selector: '#study-events-visits tr td.first select.form-control'
+  'Visit Type':
+    header:
+      selector: '#visit-type-header'
+    form:
+      selector: '#study-events-visits tr td:nth-of-type(2)'
+    dropdown:
+      selector: '#study-events-visits tr td:nth-of-type(2) select.form-control'
+  'Visit Name':
+    header:
+      selector: '#visit-name-header'
+    form:
+      selector: '#study-events-visits tr td.input-cell'
+    input-field:
+      selector: '#study-events-visits tr td.input-cell input.form-control'
+  Visit Row:
+    items:
+      selector: '.study-events-visits tr'
+  Delete Visit:
+    button:
+      selector: '#study-events-visits tr td[id^="visit-delete-cell_"] i.visit-delete'
+Visit Row:
+  selector: '#study-events-visits tr'
+  Encounter Type:
+    form:
+      selector: 'td:nth-of-type(1)'
+    dropdown:
+      selector: 'td:nth-of-type(1) select.form-control'
+  Visit Type:
+    form:
+      selector: 'td:nth-of-type(2)'
+    dropdown:
+      selector: 'td:nth-of-type(2) select.form-control'
+  Visit Name:
+    form:
+      selector: '#study-events-visits tr td.input-cell'
+    input-field:
+      selector: 'td:nth-of-type(3) input.form-control'
+  Delete Visit:
+    button:
+      selector: 'td[id^="visit-delete-cell_"] i.visit-delete'
+  Delete:
+    title: 'Delete Visit'
+    description: 'You are trying to delete a Visit that has Activities linked to it. Would you like to delete this Visit?'

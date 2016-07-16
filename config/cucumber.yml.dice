@@ -1,0 +1,11 @@
+<%= warning.as_yaml_comment %>
+<%
+opt_tags = ENV['CUCUMBER_TAGS'] ? "--tags #{ENV['CUCUMBER_TAGS']} ":""
+opt_steps = ENV['CUCUMBER_STEPS'] ? "#{ENV['CUCUMBER_STEPS']}" : "features/"
+skip_tags = configured.skip_tags || "--tags ~@DRAFT --tags ~@WIP --tags ~@wip"
+std_opts = "#{opt_tags} -r #{opt_steps} --format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict #{skip_tags}"
+
+
+%>
+default: <%= std_opts %> features
+validation: <%= std_opts %> features

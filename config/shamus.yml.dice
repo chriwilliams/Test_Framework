@@ -1,0 +1,4 @@
+<%= warning.as_yaml_comment %>
+product: <%= configured.product %>
+release: <%= configured.release %>
+profile: <%= configured.profile %>

@@ -1,0 +1,266 @@
+Analytics:
+  'No Schedule':
+    container:
+      selector: '#analytics-panel div.panel-group div.panel-body'
+    label:
+      selector: '#analytics-panel div.panel-group div.panel-body div.alert.alert-danger'
+  Analytics Container:
+    panel:
+      selector: '#analytics-panel'
+    title:
+      selector: '#analytics-panel h4.panel-title'
+  Schedule Selector:
+      button:
+        selector: '#analytics-panel div.schedule-chooser button.dropdown-toggle'
+      label:
+        selector: '#analytics-panel div.schedule-chooser button.dropdown-toggle span.selected-value'
+      dropdown:
+        selector: '#analytics-panel div.schedule-chooser ul.dropdown-menu'
+  Cost & Complexity:
+    container:
+      selector: '#cost-complexity'
+    title:
+      selector: '#cost-complexity div.panel-title'
+    section:
+      selector: '#cost-complexity div.panel-body'
+  Activity Cost Chart:
+    container:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart'
+    title:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.panel-title'
+    section:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart'
+  Protocol Complexity Chart:
+    container:
+      selector: '#protocol-complexity'
+    title:
+      selector: '#protocol-complexity div.panel-heading div.panel-title'
+    section:
+      selector: '#protocol-complexity'
+  View Chart Details:
+    table:
+      selector: '#analytics-panel div.activity-cost-by-objective-table table.activity-cost-by-objective-table-table'
+    section:
+      selector: '#analytics-panel div.activity-cost-by-objective-table table.activity-cost-by-objective-table-table'
+    link:
+      selector: 'div.activity-cost-by-objective-chart div.drill-down-link a'
+  Container:
+    header:
+      selector: '#analytics-panel div.panel-heading h4'
+    panel:
+      selector: '#analytics-panel div.panel-body'
+    description:
+      selector: '#analytics-panel div.panel-body div.no-schedule'
+
+Cost & Complexity Section:
+  Header:
+    title:
+      selector: '#cost-complexity div.panel-title'
+  Clinical Activity Site:
+    title:
+      selector: '#cost-complexity div.panel-body tr:nth-child(2) td:nth-child(1)'
+  Clinical Activity Site Minimum:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(2) td:nth-child(2)'
+  Clinical Activity Site Expected:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(2) td:nth-child(3)'
+  Clinical Activity Site Maximum:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(2) td:nth-child(4)'
+  Protocol Complexity:
+    title:
+      selector: '#cost-complexity div.panel-body tr:nth-child(3) td:nth-child(1)'
+  Protocol Complexity Minimum:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(3) td:nth-child(2)'
+  Protocol Complexity Expected:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(3) td:nth-child(3)'
+  Protocol Complexity Maximum:
+    value:
+      selector: '#cost-complexity div.panel-body tr:nth-child(3) td:nth-child(4)'
+  View by Visit:
+    container:
+      selector: '#cost-complexity div.drill-down-link'
+    link:
+      selector: '#cost-complexity div.drill-down-link a.pull-right'
+
+
+Activity Cost Chart:
+  Container:
+    panel:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart'
+  Header:
+    title:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.panel-heading div.panel-title'
+  Pie Chart:
+    container:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.activity-cost-by-objective'
+    graph:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.activity-cost-by-objective g.highcharts-series-group'
+  Legends:
+    list:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart  g.highcharts-legend-item text'
+  Tooltip:
+    label:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.activity-cost-by-objective g.highcharts-tooltip text tspan:nth-child(1)'
+    label:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.activity-cost-by-objective g.highcharts-tooltip text tspan:nth-child(2)'
+  View Chart Details:
+    link:
+      selector: '#analytics-panel div.activity-cost-by-objective-chart div.drill-down-link a'
+
+Protocol Complexity Chart:
+  Container:
+    panel:
+      selector: '#protocol-complexity div.panel-body div.chart'
+    graph:
+      selector: '#protocol-complexity div.panel-body div.chart'
+    title:
+      selector: '#protocol-complexity div.panel-heading div.panel-title'
+  Benchmark Specificity:
+    label:
+      selector: '#protocol-complexity div.panel-body h6.sub-title div.specificity-label'
+  Benchmark Indication:
+    label:
+      selector: '#indication-chooser td.title-wrap'
+    button:
+      selector: '#indication-chooser button.dropdown-toggle'
+    value:
+      selector: '#indication-chooser span.selected-value'
+    dropdown:
+      selector: '#indication-chooser ul.dropdown-menu'
+    list:
+      selector: '#indication-chooser ul.dropdown-menu li'
+  Protocol Complexity:
+    list:
+      selector: '#protocol-complexity g.highcharts-legend-item text tspan'
+  Industry Benchmark:
+    list:
+      selector: '#protocol-complexity g.highcharts-data-labels text tspan'
+
+
+View Chart Details:
+  Container:
+    table:
+      selector: '#analytics-panel div.activity-cost-by-objective-table table.activity-cost-by-objective-table-table'
+  Cost Analysis:
+    dropdown:
+      selector: '#analytics-panel select.cost-type-chooser'
+  Type:
+    header:
+      selector: '#analytics-panel tr.row-header-1 th:nth-child(1)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-type'
+  Description:
+    header:
+      selector: '#analytics-panel tr.row-header-1 th:nth-child(2)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-description'
+  Expected:
+    header:
+      selector: '#analytics-panel tr.row-header-1 th:nth-child(3)'
+  Quantity:
+    total:
+      selector: '#analytics-panel tr.row-header-2 th:nth-child(1)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-quantity'
+  Clinical Activity Site Cost per Subject:
+    header:
+      selector: '#analytics-panel tr.row-header-2 th:nth-child(2)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-total-cost'
+  Site Cost of Study:
+    header:
+      selector: '#analytics-panel tr.row-header-2 th:nth-child(3)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-percentage-cost'
+  Protocol Complexity:
+    header:
+      selector: '#analytics-panel tr.row-header-2 th:nth-child(4)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-total-complexity'
+  Protocol Complexity of Study:
+    header:
+      selector: '#analytics-panel tr.row-header-2 th:nth-child(5)'
+    total:
+      selector: '#analytics-panel tr.row-totals td.cost-type-percentage-complexity'
+  Totals Row:
+    list:
+      selector: '#analytics-panel tr.row-totals'
+  Upper Row Header:
+    list:
+      selector: '#analytics-panel tr.row-header-1'
+  Lower Row Header:
+    list:
+      selector: '#analytics-panel tr.row-header-2'
+  Activity Cost by Objective:
+    row:
+      selector: '#analytics-panel tr.row-objective'
+  Activity Cost by Endpoint:
+    row:
+      selector: '#analytics-panel tr.row-endpoint'
+  Activity Cost by Visit:
+    row:
+      selector: '#analytics-panel tr.row-studyevent'
+  Activity Cost by Study Activity:
+    row:
+      selector: '#analytics-panel tr.row-studyactivity'
+  Other Activity Cost:
+    value:
+      selector: '#analytics-panel tr.row-other'
+  Activity Cost Type:
+    toggle-button:
+      selector: 'td.cost-type-type span.toggle-expand i'
+      state:
+        on: 'fa.fa-caret-down'
+        off: 'fa.fa-caret-right'
+
+Cost & Complexity by Visit:
+  Container:
+    panel:
+      selector: '#cost-by-visit-details'
+    title:
+      selector: '#cost-by-visit-details div.panel-title'
+    table:
+      selector: '#cost-by-visit-details table'
+  Table:
+    header:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal'
+    body:
+      selector: '#cost-by-visit-details tbody'
+  Sort Status:
+    asc: 'i.fa-sort-asc'
+    desc: 'i.fa-sort-desc'
+    none: 'i'
+
+Upper Header Table:
+  Clinical Activity Site Cost per Subject:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(1) th:nth-child(2)'
+  Protocol Complexity per Subject:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(1) th:nth-child(3)'
+Lower Header Table:
+  Visits:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(1) th:nth-child(1)'
+  Clinical Activity Site Minimum:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(1)'
+  Clinical Activity Site Maximum:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(2)'
+  Clinical Activity Site Expected:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(3)'
+  Protocol Complexity Minimum:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(5)'
+  Protocol Complexity Maximum:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(6)'
+  Protocol Complexity Expected:
+    column:
+      selector: '#cost-by-visit-details thead.tableFloatingHeaderOriginal tr:nth-child(2) th:nth-child(7)'

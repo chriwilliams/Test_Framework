@@ -1,0 +1,44 @@
+Study Identification:
+  "Protocol ID":
+    label:
+      element: "protocol_id_label"
+      selector: '#study-design-details-form label[for^="protocol-id"]'
+    input-field:
+      element: "protocol_id_field"
+      selector: '#study-design-details-form input[name^="protocol-id"]'
+  "Study Name":
+    label:
+      element: "study_name_label"
+      selector: '#study-design-details-form label[for="name"]'
+    input-field:
+      element: "study_name_field"
+      selector: '#study-design-details-form input[name^="name"]'
+  "Primary Indication":
+    label:
+      element: "primary_indication_label"
+      selector: '#study-design-details-form label[for="primary-indication"]'
+    input-field:
+      element: "primary_indication_field"
+      selector: '#study-design-details-form textarea[name^="primary-indication"]'
+  "Secondary Indication":
+    label:
+      element: "secondary_indication_label"
+      selector: '#study-design-details-form label[for="secondary-indication"]'
+    input-field:
+      element: "secondary_indication_field"
+      selector: '#study-design-details-form textarea[name^="secondary-indication"]'
+  "Phase":
+    label:
+      element: "phase_label"
+      selector: '#study-design-details-form label[for="phase"]'
+    input-field:
+      element: "phase_field"
+      selector: '#study-design-details-form input[name^="phase"]'
+  "Study Design Notes":
+    label:
+      element: "study_design_notes_label"
+      selector: '#study-design-details-form label[for="description"]'
+      text:
+    input-field:
+      element: "study_design_notes_field"
+      selector: "#study-design-description-input-field"

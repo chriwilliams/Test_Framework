@@ -1,0 +1,245 @@
+Schedule Grid Details:
+  Context Menu:
+    dropdown:
+      selector: '#context-menu-cell'
+  Schedule Grid:
+    panel:
+      selector: 'div.schedule-grid2'
+    table:
+      selector: '.schedule-grid2-studycell-table'
+  Visits:
+    list:
+      selector: 'table.schedule-grid2-visit-header-table tbody tr th.visit-header-cell'
+  Activities:
+    list:
+      selector: 'table.schedule-grid2-activity-header-table td.activity-header-cell'
+  Multiple Selection:
+    toggle-button:
+      selector: 'button.btn-multiselect-toggle'
+      state:
+        on: 'active btn-multiselect-multiple'
+        off: 'btn-multiselect-single'
+  Clear Selection:
+    selector: 'button.btn-clear-selections'
+  Cells Matrix:
+    selector: 'table.schedule-grid2-studycell-table'
+  Cells Row:
+    selector: 'table.schedule-grid2-studycell-table tbody tr:nth-of-type(<activity>)'
+  Cells Cell:
+    selector: 'table.schedule-grid2-studycell-table tbody tr:nth-of-type(<activity>) td.study-activity-event-cell:nth-of-type(<visit>)'
+  Cells Context Menu:
+    button:
+      selector: 'div.fa.fa-caret-down.menu-side'
+    menu:
+      selector: 'div.cell-context-menu'
+    items:
+      selector: 'div.cell-context-menu ul il'
+  Full Screen:
+    button:
+      selector: 'div.schedule2-panel button.btn-expand'
+
+Schedule Expanded:
+  Container:
+    panel:
+      selector: '#child-view-panel div.schedule-is-expanded'
+
+Cell Context Menu:
+  Purpose:
+    link:
+      selector: '#context-menu-cell li.purpose-label a.cell-context-request'
+  Quantity:
+    link:
+      selector: '#context-menu-cell li.quantity-label a.cell-context-request'
+
+Activity Context Menu:
+  Dropdown:
+    arrow:
+      selector: 'div.schedule-grid2-activity-header tr:nth-of-type(<activity>) td.activity-header-cell div.fa-caret-down'
+    list:
+      selector: '#context-menu-cell'
+  Activity Details:
+    link:
+      selector: 'li.activity-details-label a.cell-context-request'
+  Lab Info:
+    link:
+      selector: 'li.activity-labinfo-label a.cell-context-request'
+
+Activity Details:
+  Dialog:
+    title:
+      selector: '#child-view-panel div[ng-show="isStudyActivity"] div.modal-content.context-event-content h5.modal-header'
+    container:
+      selector: '#child-view-panel div[ng-show="isStudyActivity"] div.modal-content.context-event-content'
+    tab:
+      selector: '#study-activity-details-modal li.activity-details-tab a.dialog-tab-name'
+  Default Activity Name:
+    label:
+      selector: 'div.activity-details-tab-body div.default-name label'
+    radio button:
+      selector: '#default-activity-name'
+    value:
+      selector: 'div.field-default-activity-name'
+  Custom Activity Name:
+    label:
+      selector: '#study-activity-details-modal div.custom-name label'
+    description:
+      selector: '#study-activity-details-modal div.custom-name span.text-muted'
+    radio button:
+      selector: '#custom-activity-name'
+    textarea:
+      selector: '#custom-activity-name-text'
+  Description:
+    label:
+      selector: '#study-activity-details-modal div.description label.description'
+    value:
+      selector: '#study-activity-details-modal div.description div.value'
+  Code:
+    label:
+      selector: '#study-activity-details-modal div.code label'
+    value:
+      selector: '#study-activity-details-modal div.code div.value'
+  Cancel:
+    button:
+      selector: '#context-modal-footer button.cancel-btn'
+  Save:
+    button:
+      selector: '#context-modal-footer button.save-btn'
+
+
+Lab Info:
+  Dialog:
+    title:
+      selector: '#child-view-panel div[ng-show="isStudyActivity"] div.modal-content.context-event-content h5.modal-header'
+    tab:
+      selector: '#study-activity-details-modal li.activity-details-tab a.dialog-tab-name'
+    container:
+      selector: '#child-view-panel div[ng-show="isStudyActivity"] div.modal-content.context-event-content'
+    tab:
+      selector: '#study-activity-details-modal li.activity-details-tab a.dialog-tab-name'
+  Central Lab:
+    label:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.checkbox label'
+    checkbox:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.checkbox input[type="checkbox"]'
+    message:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.central-lab-message p'
+    warning:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.central-lab-warning span'
+    warnings:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.central-lab-warning span p'
+  Analyte Quantity:
+    label:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.analytes label'
+    description:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.analytes div'
+    input:
+      selector: '#study-activity-details-modal div.activity-labinfo-tab-body div.analytes input[type="number"]'
+  Cancel:
+    button:
+      selector: '#context-modal-footer button.cancel-btn'
+  Save:
+    button:
+      selector: '#context-modal-footer button.save-btn'
+
+
+Visit Context Menu:
+  Dropdown:
+    arrow:
+      selector: 'div.schedule-grid2-visit-header th.visit-header-cell:nth-of-type(<visit>) div.fa-caret-down'
+    list:
+      selector: '#context-menu-cell'
+  Visit Optional/Conditional:
+    link:
+      selector: 'li.optional-event-label a.cell-context-request'
+  Copy From Visit:
+    link:
+      selector: 'li.copy-visit-label a.cell-context-request'
+
+Visit Optional/Conditional:
+  Dialog:
+    title:
+      selector: '#child-view-panel div[ng-show="isStudyEvent && !isCopy"] div.modal-content.context-event-content h5.modal-header'
+    container:
+      selector: '#child-view-panel div[ng-show="isStudyEvent && !isCopy"] div.modal-content.context-event-content'
+  Visit Type:
+    label:
+      selector: 'div.simple-panel-label'
+  Percentage of Subjects:
+    label:
+      selector: 'div.optional-body-container label.percentage-label'
+    input:
+      selector: 'div.optional-body-container input.percentage-of-subjects'
+  Optional/Conditional:
+    label:
+      selector: 'div.optional-body-container label.optional-label'
+    select:
+      selector: 'div.optional-body-container select.visit-optional-chooser'
+  Cancel:
+    button:
+      selector: '#context-modal-footer button.cancel-btn'
+  Save:
+    button:
+      selector: '#context-modal-footer button.save-btn'
+
+Copy Visit:
+  Dialog:
+    title:
+      selector: '#child-view-panel div[ng-show="isCopy"] div.modal-content.context-event-content h4.modal-header'
+    container:
+      selector: '#child-view-panel div[ng-show="isCopy"] div.modal-content.context-event-content'
+  Copy from Visit:
+    container:
+      selector: '#child-view-panel div[ng-show="isCopy"] div.modal-content.context-event-content div.modal-body'
+    label:
+      selector: '#child-view-panel div[ng-show="isCopy"] div.modal-content.context-event-content div.modal-body div.simple-panel-label'
+    input:
+      select: '#child-view-panel div[ng-show="isCopy"] div.modal-content.context-event-content div.modal-body select.events-chooser'
+  Cancel:
+    button:
+      selector: '#context-modal-footer button.cancel-btn'
+  Save:
+    button:
+      selector: '#context-modal-footer button.save-btn'
+
+
+Purpose Cell Context:
+  Dialog:
+    title:
+      selector: '.modal-header.context-cell-dialog-title'
+  Container:
+    panel:
+      selector: '.modal-body.context-modal-body'
+    tab:
+      selector: 'li.purpose-tab a.context-tab.dialog-tab-name.pull-left.purpose-tab'
+  Purpose Row: 'tr.purpose-row'
+  Purpose Title Row: 'tr.purpose-title-row div.purpose-title-content'
+
+Quantity & Optional/Conditional:
+  Dialog:
+    title:
+      selector: '.modal-header.context-cell-dialog-title'
+  Container:
+    panel:
+      selector: '.modal-body.context-modal-body'
+    tab:
+      selector: 'li.quantity-tab a.context-tab.dialog-tab-name.pull-left.quantity-tab'
+  Required Minimum Quantity:
+    label:
+      selector: 'td.col-md-4.quantity-label'
+    input:
+      selector: 'input.form-control.numeric-field.quantity-value'
+  Optional/Conditional:
+    label:
+      selector: 'td.col-md-8.conditional-label.bottom-label'
+    select:
+      selector: 'select.form-control.cell-optional-chooser.optional-chooser'
+  Percentage of Subjects:
+    label:
+      selector: 'td.col-md-8.percentage-label.bottom-label'
+    input:
+      selector: 'input.form-control.numeric-field.percentage-value'
+  Optional/Conditional Quantity:
+    label:
+      selector: 'td.col-md-4.optional-quantity-label'
+    input:
+      selector: 'input.form-control.numeric-field.optional-value'

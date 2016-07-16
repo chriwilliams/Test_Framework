@@ -1,0 +1,29 @@
+Rename Scenario:
+  Dialog:
+    container:
+      selector: 'div.modal-dialog'
+      element: "rename_scenario_modal_dialog"
+  Title:
+    label:
+      selector: 'div.modal-header h4.modal-title'
+      element: "rename_scenario_name_label"
+  Scenario Name:
+    label:
+      selector: '#scenario-rename-form label[for="scenario-name"]'
+      element: "rename_scenario_name_input"
+    input-text:
+      selector: '#scenario-rename-form input[name="scenario-name"]'
+      element: "rename_scenario_name_input"
+  Save:
+    button:
+      selector: 'div.modal-footer button:nth-of-type(2)'
+      element: "rename_scenario_save_button"
+  Disabled Save:
+    button:
+      selector: 'div.modal-footer button[disabled="disabled"]:nth-of-type(2)'
+      element: "rename_scenario_save_button"
+  Cancel:
+    button:
+      selector: 'div.modal-footer button:nth-of-type(1)'
+      element: "rename_scenario_cancel_button"
+

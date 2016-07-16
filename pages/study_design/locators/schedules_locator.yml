@@ -1,0 +1,93 @@
+Schedule:
+  Container:
+    panel:
+      selector: '#child-view-panel div.schedules-container'
+
+
+No Schedule:
+  Container:
+    panel:
+      selector: 'div.noschedules-new'
+  New Schedule:
+    button:
+      selector: '#new_schedule_button_id'
+    label:
+      selector: '#new_schedule_label_id'
+
+
+Schedules:
+  New Schedule:
+    button:
+      selector: '#new_schedule_button'
+    label:
+      selector: '#new_schedule_button span:nth-child(2)'
+  Schedule Selector:
+    button:
+      selector: '#child-view-panel div.schedule-chooser button.dropdown-toggle'
+    label:
+      selector: '#child-view-panel div.schedule-chooser button.dropdown-toggle span.selected-value'
+    dropdown:
+      selector: '#child-view-panel div.schedule-chooser ul.dropdown-menu'
+  Active Schedule:
+    title:
+      selector: '#child-view-panel div.schedule-chooser button.dropdown-toggle span.selected-value'
+
+
+Active Schedule:
+  Action:
+    button:
+      selector: '#child-view-panel div.schedule-tools button.dropdown-toggle'
+    dropdown:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu'
+    section:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu'
+    list:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu li'
+  Schedule Tab:
+    bar:
+      selector: '#schedule-content-tab'
+  Rename:
+    title: 'Rename Schedule'
+    input: 'schedule-name'
+  Delete:
+    title: 'Delete Schedule'
+    description: 'Are you sure you want to permanently delete the schedule?'
+
+
+Schedule Action:
+  Dropdown:
+    gear:
+      selector: '#child-view-panel div.schedule-chooser-tools ul.dropdown-menu'
+  Rename:
+    button:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu li:nth-of-type(1)'
+  Copy:
+    button:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu li:nth-of-type(2)'
+  Delete:
+    button:
+      selector: '#child-view-panel div.schedule-tools ul.dropdown-menu li:nth-of-type(3)'
+
+
+Schedule Tab:
+  Activities:
+    tab:
+      selector: '#schedule-activities-tab'
+    label:
+      selector: '#schedule-activities-tab'
+    panel:
+      selector: '#activity-details'
+  Visits:
+    tab:
+      selector: '#schedule-visits-tab'
+    label:
+      selector: '#schedule-visits-tab'
+    panel:
+      selector: '#study-events-container'
+  Schedule Grid:
+    tab:
+      selector: '#schedule-schedule-grid2-tab'
+    label:
+      selector: '#schedule-schedule-grid2-tab'
+    panel:
+      selector: 'div.schedule2-panel'

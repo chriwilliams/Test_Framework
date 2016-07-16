@@ -1,0 +1,281 @@
+Benchmark Analysis:
+  Container:
+    header:
+      selector: '#benchmark-analysis-panel h4'
+    panel:
+      selector: '#benchmark-analysis-panel'
+  Schedule Selector:
+    button:
+      selector: '#benchmark-analysis-panel div.schedule-chooser button.dropdown-toggle'
+    label:
+      selector: '#benchmark-analysis-panel div.schedule-chooser button.dropdown-toggle span.selected-value'
+    dropdown:
+      selector: '#benchmark-analysis-panel div.schedule-chooser ul.dropdown-menu'
+  Active Schedule:
+    title:
+      selector: '#benchmark-analysis-panel div.schedule-chooser button.dropdown-toggle span.selected-value'
+  Indication Selector:
+     button:
+       selector: '#indication-chooser div.indications-selector button.dropdown-toggle'
+     label:
+       selector: '#indication-chooser div.indications-selector button.dropdown-toggle span.selected-value'
+     dropdown:
+       selector: '#indication-chooser div.indications-selector ul.dropdown-menu'
+     list:
+       selector: '#indication-chooser div.indications-selector ul.dropdown-menu li a'
+  Specificity:
+    title:
+      selector: '#benchmark-specificity dt'
+    label:
+      selector: '#benchmark-specificity dd'
+  Data Volume:
+    title:
+      selector: '#benchmark-data-volume dt'
+    label:
+      selector: '#benchmark-data-volume dd'
+  Summary Benchmarks:
+    title:
+      selector: '#summary-benchmarks div.panel-title'
+    panel:
+      selector: '#summary-benchmark'
+  Activity Benchmarks:
+    title:
+      selector: '#activity-benchmarks div.panel-title'
+    panel:
+      selector: '#activity-benchmarks'
+    table:
+      selector: '#activity-benchmarks .table'
+  Upper Summary Benchmark:
+    table:
+      selector: '#summary-benchmark table.multiple-study-values'
+  Lower Summary Benchmark:
+    table:
+      selector: '#summary-benchmark table.single-study-values'
+  Schedule Selection:
+    section:
+      selector: '#benchmark-analysis-panel div.schedule-chooser-container'
+  Benchmark Information:
+    section:
+      selector: '#benchmark-information'
+
+Schedule Selection:
+  Navigate:
+    container:
+      selector: 'div.schedule-chooser-container'
+      element: 'benchmark_analysis_schedule_chooser_container'
+    select:
+      selector: 'select.schedule-chooser'
+      element: 'benchmark_analysis_schedule_chooser_select'
+
+No Schedule Benchmark Analysis:
+  Container:
+    header:
+      selector: '#benchmark-analysis-panel div.panel-heading h4'
+      element: 'no_schedule_benchmark_analysis_container_header'
+    panel:
+      selector: '#benchmark-analysis-panel div.panel-body'
+      element: 'no_schedule_benchmark_analysis_container_panel'
+    description:
+      selector: '#benchmark-analysis-panel div.panel-body div.no-schedule'
+      element: 'no_schedule_benchmark_analysis_container_label'
+
+
+Schedule Section:
+  Selection:
+    value:
+      selector: 'div.schedule-chooser-container'
+      element: 'schedule_section_selection_value'
+    select:
+      selector: 'select.schedule-chooser'
+      element: 'schedule_section_selection_select'
+
+Benchmark Information:
+  Container:
+    panel:
+      selector: '#benchmark-information'
+      element: 'benchmark_analysis_benchmark_information_section'
+  Benchmark Specificity:
+    label:
+      selector: '#benchmark-information'
+      element: 'benchmark_information_benchmark_specificity_label'
+    value:
+      selector: '#benchmark-information'
+      element: 'benchmark_information_benchmark_specificity_value'
+  Data Volume:
+    label:
+      selector: '#benchmark-information'
+      element: 'benchmark_information_data_volume_value'
+    value:
+      selector: '#benchmark-information'
+      element: 'benchmark_information_data_volume_value'
+
+
+Summary Benchmarks:
+  Top Table:
+    header:
+  Lower Table:
+    header:
+  Footer:
+    label:
+      selector:
+      element:
+
+Total Visit Quantity:
+  Title:
+    header:
+      selector:
+      element:
+  Min:
+    item:
+      selector:
+      element:
+  Max:
+    item:
+      selector:
+      element:
+  Expected:
+    item:
+      selector:
+      element:
+  Low:
+    item:
+      selector:
+      element:
+  High:
+    item:
+      selector:
+      element:
+  Medium:
+    item:
+      selector:
+      element:
+Total Activity Quantity:
+  Title:
+    header:
+      selector:
+      element:
+  Min:
+    item:
+      selector:
+      element:
+  Max:
+    item:
+      selector:
+      element:
+  Expected:
+    item:
+      selector:
+      element:
+  Low:
+    item:
+      selector:
+      element:
+  High:
+    item:
+      selector:
+      element:
+  Medium:
+    item:
+      selector:
+      element:
+Unique Activity Quantity:
+  Title:
+    header:
+      selector:
+      element:
+  Study:
+    item:
+      selector:
+      element:
+  Low:
+    item:
+      selector:
+      element:
+  High:
+    item:
+      selector:
+      element:
+  Medium:
+    item:
+      selector:
+      element:
+Subject Participation Duration:
+  Title:
+    header:
+      selector:
+      element:
+  Study:
+    item:
+      selector:
+      element:
+  Low:
+    item:
+      selector:
+      element:
+  High:
+    item:
+      selector:
+      element:
+  Medium:
+    item:
+      selector:
+      element:
+
+Activity Benchmarks:
+  Heading:
+    title:
+  Main Table:
+    header:
+  Heading:
+    row:
+  Danger Statement:
+    item:
+    label:
+  Warning Statement:
+    item:
+    label:
+  Not Available Statement:
+    item:
+    label:
+  Metrics Statement:
+    label:
+  Code:
+    index:
+    title:
+    column:
+  Activities:
+    index:
+    title:
+    column:
+  Median Cost:
+    index:
+    title:
+    column:
+  Protocol Complexity:
+    index:
+    title:
+    column:
+  Average Visit Quantity:
+    index:
+    title:
+    column:
+  Average Quantity Range:
+    index:
+    title:
+    column:
+  Average Activitiy Quantity:
+    index:
+    title:
+    column:
+  Min:
+    index:
+    title:
+    column:
+  Max:
+    index:
+    title:
+    column:
+  Expected:
+    index:
+    title:
+    column:

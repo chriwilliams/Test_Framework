@@ -1,0 +1,378 @@
+eng:
+  HTML_LANG: en
+  COMMON:
+    CANCEL: Cancel
+    SAVE: Save
+    NEW: New
+    CONFIRM: Confirm
+    'YES': 'Yes'
+    'NO': 'No'
+    CONFIRM_DELETE: Are you sure you want to remove this {{ toDelete }}?
+    ERROR_MESSAGES: Error Messages
+    CLOSE: Close
+    WAIT_MESSAGE: Processing...
+    DELETE: Delete
+    RENAME: Rename
+    EXPORT: Export
+    EDIT: Edit
+    COPY: Copy
+    ALL_FIELDS_REQUIRED: '- All fields are required'
+    NOT_AVAILABLE: 'N/A'
+    HTTP_ERROR:
+      GENERIC_ERROR_TITLE: Error {{http_status_class}}xx
+      MESSAGE_4xx: '<p>Unexpected error code {{errorStatus}} {{errorStatusText}}. Please contact your MCC Administrator for assistance.</p><p>ID: <span id="trace-id">{{traceId}}</span></p>'
+      MESSAGE_5xx: '<p>Unexpected error code {{errorStatus}} {{errorStatusText}}. Please refresh and try again.</p><p>ID: <span id="trace-id">{{traceId}}</span></p>'
+      CODED_ERROR_TITLE: Error {{http_status_class}}
+      MESSAGE_409: '<p>Unexpected error code {{errorStatus}}.</p><p>Another user is currently attempting to edit this item. Please refresh your browser to continue.</p><p>ID: <span id="trace-id">{{traceId}}</span></p>'
+      MESSAGE_410: '<p>Unexpected error code {{errorStatus}}.</p><p>The item you are attempting to edit has been removed by another user. Please refresh your browser to continue.</p><p>ID: <span id="trace-id">{{traceId}}</span></p>'
+
+  FORMAT:
+    CURRENCY: "{{currency_symbol}} {{value}}"
+  GENERAL:
+    ACTIVITY: activity
+  HEADER:
+    ALL_STUDIES: All Studies
+  STUDIES_LIST:
+    STUDY_NAME: Study Name
+    PROTOCOL_ID: Protocol ID
+    PRIMARY_INDICATION: Primary Indication
+    SECONDARY_INDICATION: Secondary Indication
+    PHASE: Phase
+  NAVBAR:
+    DESIGN_OPTIMIZATION_LABEL: Design Optimization
+    ACTION_LABEL: Action
+    UNSAVED_INDICATOR: ' *'
+    SAVED_INDICATOR: ' '
+  NOSCENARIOS:
+    WELCOME_MESSAGE: Welcome!
+    START_DESIGN_LABEL: Start Design
+  SCENARIO_DETAILS:
+    SHOW: Show Scenario Notes
+    HIDE: Hide Scenario Notes
+    OBJECTIVES:
+      NEW_OBJECTIVE: New Objective
+      ADD_OBJECTIVE: Add Objective
+      EDIT_OBJECTIVE: Edit Objective
+      DELETE_MESSAGE: Are you sure you want to remove this objective? <br/>
+                                Warning - Deleting this objective will remove the objective AND all endpoints attached to the objective
+      DELETE_TITLE: Delete Objective
+      SELECT_OBJECTIVE_TYPE: Select Objective Type
+    ENDPOINTS:
+      ENDPOINTS: Endpoints
+      ADD_ENDPOINT: Add Endpoint
+      EDIT_ENDPOINT: Edit Endpoint
+      SELECT_ENDPOINT_TYPE: Select Endpoint Type
+      SELECT_ENDPOINT_SUBTYPE: Select Endpoint Subtype
+      DELETE_MESSAGE: Warning - Are you sure that you want to delete this endpoint?
+      DELETE_TITLE: Delete Endpoint
+      NEW_ENDPOINT: New Endpoint
+    ANALYTICS_LABEL: Schedule Analytics
+  SCENARIO_DELETE:
+    TITLE: Delete Scenario
+    MESSAGE: Are you sure you would like to delete the scenario?
+  SCHEDULE_DELETE:
+    TITLE: Delete Schedule
+    MESSAGE: Are you sure you want to permanently delete the schedule?
+  ACCORDION:
+    STUDY_DESIGN_LABEL: Study Identification
+    OBJECTIVES-ENDPOINTS_LABEL: Objectives/Endpoints
+    SCHEDULE_LABEL: Schedule
+  SCHEDULE:
+    SCHEDULE_BUTTON: Schedule
+    SCHEDULE_CONTENT_TAB:
+      ACTIVITIES_TAB: Activities
+      VISITS_TAB: Visits
+      SCHEDULE_GRID_TAB: Schedule Grid
+    RENAME_SCHEDULE_TITLE: Rename Schedule
+    RENAME_SCHEDULE_NAME_LABEL: Name
+  SCENARIO:
+    RENAME_SCENARIO_TITLE: Rename Scenario
+    RENAME_SCENARIO_NAME_LABEL: Name
+  STUDY_DETAILS:
+    PROTOCOL_ID_LABEL: Protocol ID
+    STUDY_NAME_LABEL: Study Name
+    PRIMARY_INDICATION_LABEL: Primary Indication
+    SECONDARY_INDICATION_LABEL: Secondary Indication
+    PHASE_LABEL: Phase
+    DESCRIPTION_OF_STUDY_DESIGN_LABEL: Study Design Notes
+  NOSCHEDULES:
+    NEW_SCHEDULE_LABEL: New Schedule
+  ACTIVITY_DETAILS:
+    NAME_AND_DESCRIPTION_LABEL: Name & Description
+    ACTIVITY_NAME_LABEL: Activity Name
+    CODE_LABEL: Code
+    USAGE_LABEL: Protocol Usage %
+    NO_SEARCH_RESULTS: No search results
+    NOTHING_ADDED: No activities have been added yet
+    INPUT_PLACEHOLDER: Enter search term
+    REMOVE_CONFIRM: Are you sure you want to remove this activity?
+    SEARCHING: Searching...
+    REMOVE_CONFIRM_TITLE: Delete Activity
+    REMOVE_CONFIRM: You are trying to delete an Activity that is linked to a Visit(s).  Would you like to delete this Activity?
+    SEARCH_HINT: Please enter 2 or more characters
+    DESCRIPTION: Description
+    DEFAULT_ACTIVITY_NAME: Default Activity Name
+    CUSTOM_ACTIVITY_NAME: Custom Activity Name
+    MAX_CHARACTERS: (Maximum 255 characters)
+  ERRORS:
+    HOME_LINK: Return back to Design Optimization
+    MISSING_PARAMTER: Missing Parameter
+    404_PAGE:
+      TITLE: "The page you were looking for doesn't exist (404)"
+      HEADER: "The page you were looking for doesn't exist."
+      BODY: You may have mistyped the address or the page may have moved.
+    422_PAGE:
+      TITLE: "The change you wanted was rejected (422)"
+      HEADER: The change you wanted was rejected.
+      BODY: "Maybe you tried to change something you didn't have access to."
+    500_PAGE:
+      TITLE: "We're sorry, but something went wrong (500)"
+      BODY: "We're sorry, but something went wrong."
+  STUDY_EVENTS:
+    STUDY_EVENT_LABEL: 'Visit '
+    NEW_STUDY_EVENT_LABEL: New Visit(s)
+    ENCOUNTER_TYPE_LABEL: Encounter Type
+    STUDY_EVENT_TYPE_LABEL: Visit Type
+    NAME_LABEL: Name
+    DELETE_TITLE: Delete Visit
+    DELETE_MESSAGE: You are trying to delete a Visit that has Activities linked to it. Would you like to delete this Visit?
+  SCHEDULE_GRID:
+    ACTIVITIES_LABEL: Activities
+    MULTISELECT_INFO: Select multiple cells to apply purpose
+    MULTISELECT_LABEL: "Multiple Selection"
+    MULTISELECT_CLEAR: Clear Selections
+    QUANTITY_LABEL: "Quantity & Optional/Conditional"
+    CHECK_AND_QUANTITY_LABEL: "Quantity & Optional/Conditional"
+    PURPOSES_LABEL: Purpose
+    CHECK_AND_PURPOSES_LABEL: Purpose
+    OPTIONAL_CONDITIONAL: Visit Optional/Conditional
+    ACTIVITY_DETAILS: Activity Details
+  ANALYTICS:
+    LABEL: Analytics
+    SPECIFICITY: Specificity
+    SCHEDULE_ANALYTICS_LAYOUT_TITLE: Schedule Analytics
+    NO_SCHEDULES: There are no schedules to analyze
+    COST_COMPLEXITY: Cost Complexity
+    PROTOCOL_COMPLEXITY: Protocol Complexity vs. Industry Benchmark
+    COST_AND_COMPLEXITY: Cost & Complexity
+    MINIMUM: Minimum
+    EXPECTED: Expected
+    MAXIMUM: Maximum
+    PER_SUBJECT_COST: Clinical Activity Site Cost per Subject
+    STUDY_COMPLEXITY: Protocol Complexity per Subject
+    NO_BENCHMARKS: Sorry, the benchmarks are currently unavailable
+    ACTIVITY_COST_BY_OBJECTIVE:
+      HEADER_LABEL: Expected Activity Cost by Objective Type
+      HEADER2_LABEL: "Activity Cost by Objective Type: "
+      NO_OBJECTIVE_LABEL: Unassociated
+      OBJECTIVE_LABEL: "{{type}} Objective"
+      ENDPOINT_LABEL: "{{type}} / {{subtype}} Endpoint"
+      VIEW_CHART_DETAILS_LINK: View Chart Details
+      VIEW_CHART_DETAILS_LABEL: Chart Details
+      TABLE:
+        TOTALS_LABEL: Totals
+        TYPE_LABEL: Type
+        DESCRIPTION_LABEL: Description
+        QUANTITY_LABEL: Quantity
+        COST_LABEL: "Clinical Activity Site Cost per Subject ({{currency_symbol}})"
+        PERCENT_COST_LABEL: "% Site Cost of Study"
+        COMPLEXITY_LABEL: "Protocol Complexity"
+        PERCENT_COMPLEXITY_LABEL: "% Protocol Complexity of Study"
+        EXPECTED_LABEL: Expected
+        MINIMUM_LABEL: Minimum
+        MAXIMUM_LABEL: Maximum
+    COMPLEXITY_BAR:
+      LOW: Low
+      LOW_PCT: 25th Percentile
+      MEDIUM: Medium
+      MEDIUM_PCT: 50th Percentile
+      HIGH: High
+      HIGH_PCT: 75th Percentile
+    BENCHMARK_SERIES_NAME: Benchmark
+    BENCHMARK_COMPLEXITY_LABEL:
+      MIN: Min
+      EXP: Exp
+      MAX: Max
+    XAXIS_TITLE: 'Industry Benchmark Percentile Ranges'
+    YAXIS_TITLE: 'Protocol Complexity per Subject'
+    SCHEDULE_AXIS_LABEL: Schedule
+  BENCHMARK_ANALYSIS:
+    BUTTON_LABEL: Benchmark<br />Analysis
+    LABEL: Benchmark Analysis
+    NOTE: These metrics include activities and visits that are marked optional/conditional.
+    BENCHMARK_SPECIFICITY: Benchmark Specificity
+    DATA_VOLUME: Data Volume
+    SUMMARY:
+      LABEL: Summary Benchmarks
+      STUDY: Study
+      BENCHMARK_PCT: Benchmark
+      LOW: Low
+      LOW_PCT: 25th Percentile
+      MEDIUM: Medium
+      MEDIUM_PCT: 50th Percentile
+      HIGH: High
+      HIGH_PCT: 75th Percentile
+      MIN: Min
+      EXPECTED: Expected
+      MAX: Max
+      PROTOCOL_COMPLEXITY: Protocol Complexity
+      TOTAL_VISIT_QTY: Total Visit Quantity
+      TOTAL_ACTIVITY_QTY: Total Activity Quantity
+      PARTICIPATION_DURATION: Subject Participation Duration (Weeks)
+      UNIQUE_ACTIVITY_QTY: Unique Activity Quantity
+      DISCLAIMER: Study metrics include activities and visits that are marked optional/conditional.
+      N-A: 'N/A'
+    ACTIVITY:
+      LABEL: Activity Benchmarks
+      BENCHMARK: Benchmark
+      STUDY_ACTIVITY_QUANTITY: Study Activity Quantity
+      CODE: Code
+      ACTIVITIES: Activities
+      MEDIAN_US_COST: Median US Cost ($)
+      PROTOCOL_COMPLEXITY: Protocol Complexity
+      PROTOCOL_USAGE_PCT: Protocol Usage (%)
+      AVG_VISIT_QUANTITY: Average Visit Quantity
+      QUANTITY_RANGE: Activity Quantity Range
+      AVG_QUANTITY: Average Activity Quantity
+      MIN: Min
+      EXPECTED: Expected
+      MAX: Max
+      BENCHMARKS_NOT_AVAILABLE: No Activity Benchmarks available for current specificity.
+      LEGEND:
+        DANGER: Protocol Usage &le; 10% / Study Activity Quantity (Min) out of Benchmark Range
+        WARNING:  Protocol Usage &le; 33% / Study Activity Quantity (Min) above Benchmark Average
+        NOT_AVAILABLE_NOTE: Data not available for current specificity.
+        CPT_COLLAPSE: 1. This activity row includes all instances of this Global Activity / Code.
+        CPT_COLLAPSE_NOTE: Study metrics include activities and visits that are marked optional/conditional.
+  STUDY_CELLS:
+    MULTISELECT_TITLE: Activity/Visit Intersection(s) Selected
+    PURPOSE_TAB: Purpose
+    QUANTITY_TAB: "Quantity & Optional/Conditional"
+  QUANTITY:
+    QUANTITY_LABEL: Required Minimum Quantity
+    OPTIONAL_IN_CELLS: Optional/Conditional
+    OPTIONAL_QUANTITY: Optional/Conditional Quantity
+    OPTIONAL_PERCENTAGE: Percentage of Subjects
+  OPTIONAL:
+    PERCENTAGE_OF_SUBJECTS: Percentage of Subjects
+    OPTIONAL_IN_VISITS: Optional/Conditional
+    PERCENTAGE_SYMBOL: "%"
+  PURPOSE:
+    OTHER_PURPOSE: Other Purposes
+    ENDPOINT_LABEL: Endpoints
+  # Type values here
+  encounter_type:
+    visit_outpatient: Visit - Outpatient
+    visit_inpatient: Visit - Inpatient
+    phone: Phone
+    epro: ePRO
+    other: Other
+  visit_type:
+    treatment: Treatment
+    screening: Screening
+    baseline: Baseline
+    randomization: Randomization
+    early_termination: Early Termination
+    extension: Extension
+  endpoint_type:
+    primary: Primary
+    secondary: Secondary
+    tertiary: Tertiary
+    exploratory: Exploratory
+    other: Other
+    unassociated: Unassociated
+  endpoint_subtype:
+    efficacy: Efficacy
+    safety: Safety
+    pharmacodynamic: Pharmacodynamic
+    pharmacoeconomic: Pharmacoeconomic
+    pharmacogenomic: Pharmacogenomic
+    bio_availability: Bio-availability
+    bio_equivalency: Bio-equivalency
+    food_effect: Food effect
+    tolerability: Tolerability
+    exploratory: Exploratory
+    pharmacokinetic: Pharmacokinetic
+    quality_of_life: Quality of life
+    other: Other
+  objective_type:
+    primary: Primary
+    secondary: Secondary
+    tertiary: Tertiary
+    other: Other
+  other_purpose_type:
+    other_regulatory: Other Regulatory
+    screening: Screening
+    treatment: Treatment
+    other: Other
+  data_volume:
+    low: Low
+    medium: Medium
+    high: High
+  study_event_optional_conditional_type:
+    scheduled_for_all_subjects: Scheduled for all Subjects
+    scheduled_conditional_on_proc_result: Scheduled - Conditional on Procedure Result
+    scheduled_optional_for_subject: Scheduled - Optional for Subject
+    unscheduled_early_withdrawal: Unscheduled - Early Withdrawal
+    unscheduled_in_adverse_event: Unscheduled - In Case of Adverse Event
+    unscheduled_other: Unscheduled - Other
+  aoc_item_type:
+    perform_for_all_subjects: 'Perform for all Subjects'
+    specified_subject_gender: 'Specified Subject Gender'
+    specified_medical_history_condition: 'Specified Medical History / Condition'
+    procedure_not_previously_performed_within_specified_time_period: 'Procedure Not Previously Performed Within Specified Time Period'
+    conditional_on_procedure_result_symptom: 'Conditional on Procedure Result / Symptom'
+    clinically_warranted: 'As Clinically Warranted'
+    optional_for_subject: 'Optional for Subject'
+    until_valid_reading_recorded: 'Until Valid Reading Recorded'
+    optional_or_conditional_other: 'Optional or Conditional - Other'
+  EXPORT:
+    MINIMUM_LABEL: "Minimum"
+    EXPECTED_LABEL: "Expected"
+    MAXIMUM_LABEL: "Maximum"
+    ERROR:
+      FILE_NAME: "Export Errors"
+      404_MSG: "We are sorry. No exportable Scenario with identifier '%{scenario_id}' was found."
+      410_MSG: "We are sorry. The Scenario with identifier '%{scenario_id}' is deleted from the system."
+      422_MSG: "Maybe you tried to change something you didn't have access to when exporting Scenario with identifier '%{scenario_id}'."
+      500_MSG: "We are sorry, but something went wrong when exporting Scenario  with identifier '%{scenario_id}'."
+    STUDY_IDENTIFICATION:
+      TAB_NAME: 'Study Identification'
+      PROTOCOL_ID_LABEL: 'Protocol ID'
+      STUDY_NAME_LABEL: 'Study Name'
+      PRIMARY_INDICATION_LABEL: 'Primary Indication'
+      SECONDARY_INDICATION_LABEL: 'Secondary Indication'
+      PHASE_LABEL: 'Phase'
+      STUDY_DESIGN_NOTES_LABEL: 'Study Design Notes'
+    ACTIVITY_COST_BY_OBJECTIVE:
+      TAB_NAME: 'ActivityCostByObj-%{schedule_name}'
+      HEADER_LABEL: "%{schedule_name} - Activity Cost by Objective Type Chart Details"
+      UNASSOCIATED_LABEL: "Unassociated"
+      DATA_NOT_AVAILABLE: 'No Cost By Objective data available.'
+      TABLE:
+        OBJECTIVE_TYPE_LABEL: "Objective Type"
+        OBJECTIVE_DESCRIPTION_LABEL: "Objective Description"
+        ENDPOINT_TYPE_LABEL: "Endpoint Type"
+        ENDPOINT_DESCRIPTION_LABEL: "Endpoint Description"
+        VISIT_LABEL: "Visit"
+        CODE_LABEL: "Code"
+        ACTIVITY_LABEL: "Activity"
+        QUANTITY_LABEL: "Quantity"
+        COST_LABEL: "Clinical Activity Site Cost per Subject (%{currency_symbol})"
+        PERCENT_COST_LABEL: "% Site Cost of Study"
+        COMPLEXITY_LABEL: "Protocol Complexity"
+        PERCENT_COMPLEXITY_LABEL: "% Protocol Complexity of Study"
+    BENCHMARK_ANALYSIS:
+      SCHEDULE: "Schedule"
+      TITLE_LABEL: "%{schedule_name} - Benchmark Analysis"
+      SUMMARY_BENCHMARK:
+        TAB_NAME: "SumBenchmarks-%{schedule_name}"
+      ACTIVITY_BENCHMARK:
+        TAB_NAME: 'ActBenchmarks-%{schedule_name}'
+        LEGEND:
+          DANGER: Protocol Usage ≤ 10% / Study Activity Quantity (Min) out of Benchmark Range
+          WARNING:  Protocol Usage ≤ 33% / Study Activity Quantity (Min) above Benchmark Average
+  COST_TYPE_LIST:
+    expected: "Expected Quantity, Cost & Complexity"
+    minimum: "Min Quantity, Cost & Complexity"
+    maximum: "Max Quantity, Cost & Complexity"

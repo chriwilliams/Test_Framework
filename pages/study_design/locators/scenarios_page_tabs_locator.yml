@@ -1,0 +1,219 @@
+Page:
+  Header:
+    title:
+      selector: "h3.study-name span:nth-of-type(1)"
+      element: "study_name"
+    badge:
+      'read only': '#janusmain div.page-header-text span.readonly'
+  Content:
+    controller:
+      selector: 'div#main div[ng-controller="MainCtrl"]'
+      element: "main_ctrl"
+    header:
+      selector: "div.page-header.page-header-main"
+      element: "page_header"
+    title:
+      selector: "h3.study-name span:nth-of-type(1)"
+      element: "study_name"
+
+
+No Scenario:
+  "Welcome Message":
+    label:
+      selector: "div.welcome-message"
+      element: "welcome_message_label"
+  "Start Design":
+    button:
+      selector: "#start-design-button"
+      element: "start_design_button"
+    label:
+      selector: "#start-design-button div.start-design-label"
+      element: "start_design_button_label"
+  "Read Only":
+    container:
+      'read only': '#janusmain div.empty-basket'
+    label:
+      'read only': '#janusmain div.empty-basket p.text-center'
+
+
+Scenario:
+  Scenario Tab:
+    bar:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_page_scenario_tab_bar"
+  Tab:
+    new button:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_tab_new_button"
+    new button label:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_tab_new_button_label"
+    button:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_tab_button"
+    bar:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_tab_bar"
+  Analytics:
+    button:
+      selector: "#analytics-toggle-button"
+      element: "scenario_page_analytics_button"
+    label:
+      selector: "#analytics-toggle-button div.btn-name"
+      element: "scenario_page_analytics_button_label"
+    panel:
+      selector: "#analytics-panel"
+      element: "scenario_page_analytics_panel"
+  Benchmark Analysis:
+    button:
+      selector: "#benchmark-analysis-toggle-button"
+      element: "scenario_page_benchmark_analysis_button"
+    label:
+      selector: "#benchmark-analysis-toggle-button div.btn-name"
+      element: "scenario_page_benchmark_analysis_button_label"
+    panel:
+      selector: "#benchmark-analysis-panel"
+      element: "scenario_page_benchmark_analysis_panel"
+  Schedule:
+    button:
+      selector: "#schedule-toggle-button"
+      element: "scenario_page_schedule_button"
+    label:
+      selector: "#schedule-toggle-button div.btn-name"
+      element: "scenario_page_schedule_button_label"
+    panel:
+      selector: "#child-view-panel div.schedules-container"
+      element: "scenario_page_schedule_panel"
+  No Schedule:
+    container:
+      selector: "#child-view-panel div.noschedules-new"
+      element: "scenario_page_no_schedule_container"
+  Schedules:
+    container:
+      selector: "#child-view-panel div.schedules-container"
+      element: "scenario_page_schedules_container"
+  Study Identification:
+    link:
+      selector: "#study-design-link"
+      element: "scenario_page_study_identification_accordion"
+    name:
+      selector: "#study-design-link"
+      element: "scenario_page_study_identification_name"
+    toggle-button:
+      selector: "#study-design-toggle-button"
+      element: "study_identification_accordion_toggle_button"
+      state:
+        on: "fa fa-caret-right"
+        off: "fa fa-caret-down"
+    panel:
+      selector: "#study-design div.panel-body"
+      element: "study_identification_panel"
+  No Objectives:
+    container:
+      selector: "#no-objectives"
+      element: "scenario_page_no_objectives_container"
+  Objectives/Endpoints:
+    link:
+      selector: "#objectives-endpoints-link"
+      element: "scenario_page_objectives_endpoints_accordion"
+    name:
+      selector: "#objectives-endpoints-link"
+      element: "scenario_page_objectives_endpoints_name"
+    toggle-button:
+      selector: "#objectives-endpoints-toggle-button"
+      element: "objectives_endpoints_accordion_toggle_button"
+      state:
+        on: "fa fa-caret-right"
+        off: "fa fa-caret-down"
+    panel:
+      selector: "#objectives-endpoints div.panel-body"
+      element: "scenario_page_objectives_endpoints_panel"
+
+Scenario Tab:
+  New Scenario:
+    button:
+      selector: "#new_scenario_button"
+      element: "scenario_tab_new_scenario_button"
+    label:
+      selector: "#new_scenario_button"
+      element: "scenario_tab_new_scenario_label"
+  Bar:
+    container:
+      selector: "div.scenarios-tab-bar"
+      element: "scenario_tab_bar_container"
+    list:
+      selector: "#scenario-tabs"
+      element: "scenario_tab_bar_list"
+    scenario:
+      selector: "#scenario-tabs li a"
+      element: "scenario_tab_bar_scenario"
+    active scenario:
+      selector: "#scenario-tabs li.active a"
+      element: "scenario_tab_bar_scenario"
+  Scenario:
+    tab:
+      selector: '#scenario-tabs li a[data-toggle="tab"]'
+      element: "scenario_tab_scenario_container"
+    delete button:
+      selector: "i.scenario-tab-delete.icon-delete"
+      element: "scenario_tab_scenario_delete_button"
+    label:
+      selector: "div.scenario-name"
+      element: "scenario_tab_scenario_label"
+  Active Scenario:
+    tab:
+      selector: '#scenario-tabs li.active a[data-toggle="tab"]'
+      element: "scenario_tab_active_scenario_container"
+    delete button:
+      selector: "li.active a i.scenario-tab-delete.icon-delete"
+      element: "scenario_tab_active_scenario_delete_button"
+    label:
+      selector: "li.active a div.scenario-name"
+      element: "scenario_tab_active_scenario_label"
+
+Active Scenario:
+  Action:
+    button:
+      selector: "#scenario-tabs li.active button.dropdown-toggle"
+      element: "active_scenario_action_button"
+    dropdown:
+      selector: "#scenario-tabs li.active ul.dropdown-menu"
+      element: "active_scenario_dropdown_arrow"
+    section:
+      selector: "#scenario-tabs li.active ul.dropdown-menu"
+      element: "active_scenario_action_section"
+    list:
+      selector: "#scenario-tabs li.active ul.dropdown-menu li"
+      element: "active_scenario_action_dropdown_list"
+  Tab:
+    label:
+      selector: "#scenario-tabs li.active a div.scenario-name"
+      element: "active_scenario_label"
+  Rename:
+    title: "LOCALES_MAPPING[#{@locale}]['SCENARIO']['RENAME_SCENARIO_TITLE']"
+    title1: LOCALES_MAPPING[#{@locale}][SCENARIO][RENAME_SCENARIO_TITLE]
+    title2: LOCALES_MAPPING[{{@locale}}][SCENARIO][RENAME_SCENARIO_TITLE]
+    title3: '[SCENARIO][RENAME_SCENARIO_TITLE]'
+    input: "scenario-name"
+  Delete:
+    title: "Delete Scenario"
+    description: "Are you sure you would like to delete the scenario?"
+
+
+Scenario Action:
+  Rename:
+    button:
+      selector: 'ul.dropdown-menu li:nth-of-type(1)'
+      element: "scenario_action_rename_active_scenario"
+  Copy:
+    button:
+      selector: 'ul.dropdown-menu li:nth-of-type(2)'
+      element: "scenario_action_copy_active_scenario"
+  Export:
+    button:
+      selector: 'ul.dropdown-menu li:nth-of-type(3)'
+      element: "scenario_action_export_active_scenario"
+  Delete:
+    button:
+      selector: 'ul.dropdown-menu li:nth-of-type(4)'
+      element: "scenario_action_delete_active_scenario"

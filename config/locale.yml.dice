@@ -1,0 +1,9 @@
+<%= warning.as_yaml_comment %>
+# Generates locale parameters for applications.
+# For single app: LOCALE_RESOURCES="app,language1,language1key,language2,language2key"
+# For Multiple app:
+# LOCALE_RESOURCES="app1,language1,language1key,language2,language2key|app2,language3,language3key"
+locale:
+  apps:<% app_resources =  configured.locale_resources ? configured.locale_resources.split("|"):[] %><% app_resources.each do |resources| %><% app_resource = resources ? resources.split(","):[] %>
+    <%= app_resource[0].sub(/^\s+/, '').sub(/\s+$/, '') %>:<% app_resource.drop(1).each_slice(2).collect{|resource| resource.join(':  ')}.each do |show_resource| %>
+      <%= show_resource %><% end %><% end %>

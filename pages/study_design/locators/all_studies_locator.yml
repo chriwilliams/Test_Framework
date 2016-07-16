@@ -1,0 +1,43 @@
+All Studies:
+  Data:
+    panel:
+      selector: '#janusmain'
+      element: "all_studies_data_panel"
+    container:
+      selector: '#janusmain div.janus-container'
+      element: "all_studies_data_container"
+    table:
+      selector: '#janusmain table'
+      element: "all_studies_data_table"
+    footer:
+      selector: '#janusmain div.panel-footer'
+      element: "all_studies_data_panel_footer"
+  Protocol ID:
+    index: '1'
+    header:
+      selector: '#janusmain thead th:nth-of-type(1)'
+      element: "all_studies_table_header_protocol_id_header"
+  Study Name:
+    index: '2'
+    header:
+      selector: '#janusmain thead th:nth-of-type(2)'
+      element: "all_studies_table_header_study_name_header"
+  Primary Indication:
+    header:
+      selector: '#janusmain thead th:nth-of-type(3)'
+      element: "all_studies_table_header_primary_indication_header"
+  Secondary Indication:
+    header:
+      selector: '#janusmain thead th:nth-of-type(4)'
+      element: "all_studies_table_header_secondary_indication_header"
+  Phase:
+    header:
+      selector: '#janusmain thead th:nth-of-type(5)'
+      element: "all_studies_table_header_phase_header"
+  Studies:
+    title:
+      selector: '#janusmain table.studies-table tbody td:nth-of-type(2)'
+    protocol:
+      selector: '#janusmain table.studies-table tbody td:nth-of-type(1)'
+    row:
+      selector: '#janusmain table.studies-table tbody tr'

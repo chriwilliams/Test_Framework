@@ -1,0 +1,9 @@
+<%= warning.as_yaml_comment %>
+# Generates parameters for running sauce labs.
+use_sauce_labs: <%= configured.use_sauce_labs || false %>
+start_tunnel: <%= configured.start_tunnel || false %>
+max_platforms:  <%= configured.start_tunnel || 8 %>
+os_browser_version:<% if (configured.sauce_browsers) %><% sauce_browsers =  configured.sauce_browsers ? configured.sauce_browsers.split("|"):[] %><% sauce_browsers.each do |sauce_browser| %><% browser_platform = sauce_browser ? sauce_browser.split(","):[] %>
+- os: <%= browser_platform[0] %>
+  browser: <%= browser_platform[1] %>
+  version: <%= browser_platform[2] %><% end %><% end %>

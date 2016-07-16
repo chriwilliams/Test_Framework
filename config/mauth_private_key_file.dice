@@ -1,0 +1,2 @@
+<%= warning.as_yaml_comment %>
+<%= Gem.win_platform? ? (configured.mauth_private_key || generate_private_key) : (!(configured.mauth_private_key).nil? && File.exist?(configured.mauth_private_key)) ? IO.read(configured.mauth_private_key) : (configured.mauth_private_key || generate_private_key) %>

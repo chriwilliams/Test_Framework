@@ -1,0 +1,37 @@
+Cell Modal Dialog:
+  selector: ".context-cell-dialog"
+  element: "cell_modal_dialog"
+  title:
+    selector: ".context-cell-dialog h5"
+    element: "cell_dialog_title"
+  Cancel:
+    button:
+      selector: "div#context-modal-footer button.cancel-btn"
+      element: "cell_dialog_cancel_button"
+  Save:
+    button:
+      selector: "div#context-modal-footer button.save-btn"
+      element: "cell_dialog_save_button"
+  tab bar:
+    selector: "div.modal-body div.dialog-tab-bar"
+    element: "cell_modal_dialog_tab_bar"
+    tabs:
+      selector: "div.modal-body div.dialog-tab-bar ul li a"
+      element: "cell_modal_dialog_tabs"
+  Purposes:
+    table:
+      selector: "div.purpose-table-container table.purpose-table tr"
+      element: "purpose_table"
+  Purpose:
+    field:
+      checkbox:
+        selector: "td.purpose-check-td"
+      description:
+        selector: "td.purpose-cell"
+      type:
+        selector: "td.purpose-type-cell"
+  Activity Quantity:
+    input:
+      selector: ".quantity-panel-container input.quantity-value"
+      element: "activity_quantity"
+

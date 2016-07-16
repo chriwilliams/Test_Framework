@@ -1,0 +1,26 @@
+Toolbar Editor:
+  Editor:
+    buttons:
+      selector: "div.mce-container-body.mce-flow-layout button"
+      element: "toolbar_editor_editor_buttons"
+  Components:
+    items:
+      selector: "div.mce-container-body.mce-flow-layout"
+      element: "toolbar_editor_components_items"
+  Bold:
+    button:
+      selector: "#mceu_0>button"
+      element: "toolbar_editor_bold_button"
+  Italic:
+    button:
+      selector: "#mceu_1>button"
+      element: "toolbar_editor_italic_button"
+  Bullet List:
+    button:
+      selector: "#mceu_2>button"
+      element: "toolbar_editor_bullet_list_button"
+  Numbered List:
+    button:
+      selector: "#mceu_3>button"
+      element: "toolbar_editor_numbered_list_button"
+
