@@ -1,12 +1,23 @@
+<<<<<<< HEAD
+*.gem
+*.rbc
+=======
 *.rbc
 *.yml
+>>>>>>> 53b8c1ad140d5f6e775fce1096d63c0a411f7ddc
 .bundle
 .config
 .yardoc
 InstalledFiles
 _yardoc
+<<<<<<< HEAD
+config/keys
+coverage
+columbo
+=======
 config/euresource.rb
 coverage
+>>>>>>> 53b8c1ad140d5f6e775fce1096d63c0a411f7ddc
 lib/bundler/man
 pkg
 rdoc
@@ -15,6 +26,26 @@ test/tmp
 test/version_tmp
 tmp
 .idea
+<<<<<<< HEAD
+.rvmrc
+config/*meditaf_config.yml
+config/MIST.rake
+config/mauth_private_key_file
+*.sh
+config/*locale.yml
+config/*cucumber.yml
+config/*shamus.yml
+config/*sauce_config.yml
+doc
+.DS_Store
+config/.DS_Store
+features/step_definitions/apis/*.json
+*.log
+features/studydesign/integrations
+features/studydesign/integrations/*.feature
+testresults
+=======
 columbo
 /*.txt
 *.log
+>>>>>>> 53b8c1ad140d5f6e775fce1096d63c0a411f7ddc
