@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'FirstFramework/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'First_Framework'
+  spec.name = 'First_Framework1'
   spec.version = FirstFramework::VERSION
   spec.authors = ['Medidata Test Automation Framework Team']
   spec.email = ['chriwilliams_23@yahoo.com']
