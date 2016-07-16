@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= warning.as_yaml_comment %>
 <%
 opt_tags = ENV['CUCUMBER_TAGS'] ? "--tags #{ENV['CUCUMBER_TAGS']} ":""
@@ -9,3 +10,9 @@ std_opts = "#{opt_tags} -r #{opt_steps} --format #{ENV['CUCUMBER_FORMAT'] || 'pr
 %>
 default: <%= std_opts %> features
 validation: <%= std_opts %> features
+=======
+<% cucumber_tags = configured.cucumber_tags ? "--tags #{configured.cucumber_tags}" : '' %>
+<% cucumber_steps = configured.cucumber_steps ? "-r #{configured.cucumber_steps}" : '' %>
+<% cucumber_format = "--format #{configured.cucumber_format || 'pretty'}" %>
+MediTAF: <%= cucumber_tags %> <%= cucumber_steps %> <%= cucumber_format %>
+>>>>>>> 53b8c1ad140d5f6e775fce1096d63c0a411f7ddc
