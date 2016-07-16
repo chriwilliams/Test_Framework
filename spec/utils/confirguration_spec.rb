@@ -3,10 +3,10 @@ require_relative '../spec_helper'
 describe MediTAF::Utils::Configuration do
 
   it 'should read a valid configuration file' do
-    expect { MediTAF::Utils::Configuration.new('./config/MediTAF_config.yml') }.to_not raise_error
+    expect { MediTAF::Utils::Configuration.new('./config/meditaf_config.yml') }.to_not raise_error
   end
 
-  it 'should find the default configuration file i.e. MediTAF_config.yml' do
+  it 'should find the default configuration file i.e. meditaf_config.yml' do
     expect { MediTAF::Utils::Configuration.new }.to_not raise_error
   end
 

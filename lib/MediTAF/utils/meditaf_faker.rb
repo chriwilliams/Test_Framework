@@ -1,4 +1,4 @@
-# MediTAFFaker is a module that provides random fake data for uid codes, random numbers, timestamp  based on the Faker gem
+# MeditafFaker is a module that provides random fake data for uid codes, random numbers, timestamp  based on the Faker gem
 #
 #*********************************************************************************************************************S**c*#
 require 'MediTAF/utils/configuration'

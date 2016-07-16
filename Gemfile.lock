@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    MediTAF4 (1.6.0)
+    Test_Framework (1.6.0)
       faker (>= 1.3)
       gmail
       logging (~> 1.8.2)
@@ -13,7 +13,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
-    builder (3.2.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -22,23 +21,11 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
-    cucumber (2.4.0)
-      builder (>= 2.1.2)
-      cucumber-core (~> 1.5.0)
-      cucumber-wire (~> 0.0.1)
-      diff-lcs (>= 1.1.3)
-      gherkin (~> 4.0)
-      multi_json (>= 1.7.5, < 2.0)
-      multi_test (>= 0.1.2)
-    cucumber-core (1.5.0)
-      gherkin (~> 4.0)
-    cucumber-wire (0.0.1)
     diff-lcs (1.2.5)
     docile (1.1.5)
     faker (1.6.1)
       i18n (~> 0.5)
     ffi (1.9.10)
-    gherkin (4.0.0)
     gmail (0.6.0)
       gmail_xoauth (>= 0.3.0)
       mail (>= 2.2.1)
@@ -55,7 +42,6 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     multi_json (1.11.2)
-    multi_test (0.1.2)
     multi_xml (0.5.5)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
@@ -63,7 +49,6 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (10.5.0)
     require_all (1.3.3)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -100,9 +85,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  MediTAF4!
-  cucumber (~> 2.4)
-  rake (~> 10.5)
+  Test_Framework!
   rspec (< 4.0)
   rspec-core (< 4.0)
   rspec-expectations (< 4.0)

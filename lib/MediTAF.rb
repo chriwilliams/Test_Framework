@@ -9,6 +9,6 @@ end
 require 'MediTAF/version'
 require 'MediTAF/services'
 require 'MediTAF/ui'
-require 'MediTAF/utils/MediTAF_faker'
+require 'MediTAF/utils/meditaf_faker'
 require 'MediTAF/utils/sticky'
 require 'MediTAF/utils/mail'

@@ -1,4 +1,4 @@
-# Test Framework
+# MediTAF
 
 Test frameworks are one of the key requirements for implementing a successful automated software testing solution. A good test framework reduces maintenance costs, and speeds up test development. Currently at Medidata, we have several test frameworks that are successfully used in various projects. However, they have been designed with a focus on a product or a project, rendering them unusable in cross-product or multi-interface automation projects.
 
@@ -12,7 +12,7 @@ MediTAF is a generic ruby-based test automation framework intended to allow auto
   * **Logging and Exception Handling:** The framework has an exception handler with multiple severity levels that can be logged to a configured file.
 
 
-## Advantages of using Test Framework
+## Advantages of using MediTAF
 
  * Enables testers to automate tests across multiple Medidata interfaces and applications.
  * The framework interprets the **Cucumber/Gherkin** language for the creation and execution of requirement/feature files.
@@ -27,13 +27,15 @@ MediTAF is a generic ruby-based test automation framework intended to allow auto
   [https://github.com/mdsol/MediTAF.git](https://github.com/mdsol/MediTAF.git)
 
 ## Documentation
-  [Medinet - MediTAF](https://sites.google.com/a/mdsol.com/knowledgebase/home/departments/r-d/sqa/utilities/MediTAF)
+  [Medinet - MediTAF](https://sites.google.com/a/mdsol.com/knowledgebase/home/departments/r-d/sqa/utilities/meditaf)
 
 ## Report Issues
 Refer to JIRA Story [MCC-96074](https://medidata.atlassian.net/browse/MCC-96074) and add sub-tasks for issues.
 
 ## Installation Instructions
 
+MediTAF is released privately as a gem, and it works with MIST. For more information and installation instructions for MIST, please refer to the git repository at [https://github.com/mdsol/MIST.git](https://github.com/mdsol/MIST.git).
 
 ## Copyright
 
+Copyright © 2013-2015 Medidata Solutions, Inc. All Rights Reserved.
