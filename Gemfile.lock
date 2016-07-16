@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    First_Framework1 (1.6.0)
+    MediTAF1 (1.6.0)
       faker (>= 1.3)
       gmail
       logging (~> 1.8.2)
@@ -86,7 +86,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  First_Framework1!
+  MediTAF1!
   rake (~> 10.5)
   rspec (< 4.0)
   rspec-core (< 4.0)

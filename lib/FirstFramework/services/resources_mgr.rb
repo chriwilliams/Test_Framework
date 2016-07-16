@@ -5,10 +5,10 @@
 # all resources are expressed as method
 # each accessed resources exposes the underlying adapter implementation
 
-require 'FirstFramework/utils/configuration'
+require 'MediTAF/utils/configuration'
 require 'active_support/core_ext/string/inflections'
 
-module FirstFramework
+module MediTAF
   module Services
     class ResourcesMgr
       include Logging
@@ -18,29 +18,29 @@ module FirstFramework
       attr_reader :stage
 
       # @note loads euresource adapter by default, otherwise attempts to load a specific adapter. adapters are
-      #  specified in *FirstFramework_configuration.services.adapter* value. the location of the adapter defaults
-      #  to services/clients within FirstFramework, otherwise it can be specified in *FirstFramework_configuration.services.adapter_home*
-      #  value. when FirstFramework attempts to load the adapter and no location has been specified, FirstFramework assumes that the
+      #  specified in *MediTAF_configuration.services.adapter* value. the location of the adapter defaults
+      #  to services/clients within MediTAF, otherwise it can be specified in *MediTAF_configuration.services.adapter_home*
+      #  value. when MediTAF attempts to load the adapter and no location has been specified, MediTAF assumes that the
       #  adapter has been load into the environment.
-      # @note the adapter must be in namespace *FirstFramework::Services::Clients*
+      # @note the adapter must be in namespace *MediTAF::Services::Clients*
       # @raise [ResourceAdapterMethodMissing] when adapter does not respond to configure
       # @raise [ResourceAdapterLoadError] when adapter could not be loaded
       def initialize
         @resources = {}
         @adapters = {}
 
-        raise ServiceConfigurationMissing, "services not found in configuration" unless FirstFramework::Utils::Configuration['services']
+        raise ServiceConfigurationMissing, "services not found in configuration" unless MediTAF::Utils::Configuration['services']
 
-        adapter_home =  FirstFramework::Utils::Configuration['services']['adapter_home']
-        adapter_home ||= "#{FirstFramework.root}/lib/FirstFramework/services/clients"
+        adapter_home =  MediTAF::Utils::Configuration['services']['adapter_home']
+        adapter_home ||= "#{MediTAF.root}/lib/MediTAF/services/clients"
 
-        adapters =  FirstFramework::Utils::Configuration['services']['adapters']
+        adapters =  MediTAF::Utils::Configuration['services']['adapters']
 
         if adapters
           adapters.split(/ *, */).each do |adapter|
             begin
               require "#{adapter_home}/#{adapter}_adapter" if File.exist? "#{adapter_home}/#{adapter}_adapter.rb"
-              @adapters[adapter.to_sym] = "FirstFramework::Services::Clients::#{adapter.camelize}Adapter".constantize.new
+              @adapters[adapter.to_sym] = "MediTAF::Services::Clients::#{adapter.camelize}Adapter".constantize.new
               @adapters[adapter.to_sym].configure
             rescue NoMethodError => e
               raise ResourceAdapterMethodMissing, %Q|"#{adapter.camelize}Adapter" is missing required configure method|

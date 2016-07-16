@@ -1,4 +1,4 @@
-module FirstFramework
+module MediTAF
   module Utils
     class Sticky < Hash
 
@@ -7,7 +7,7 @@ module FirstFramework
       end
 
       def [](key)
-        raise FirstFramework::Utils::StickyKeyNotFound, "I don't have '#{key}' key" unless has_key? key
+        raise MediTAF::Utils::StickyKeyNotFound, "I don't have '#{key}' key" unless has_key? key
         super key
       end
 
@@ -25,7 +25,7 @@ module FirstFramework
       end
     end
 
-    class StickyKeyNotFound < FirstFramework::Utils::Exceptions::FirstFrameworkException; end
+    class StickyKeyNotFound < MediTAF::Utils::Exceptions::MediTAFException; end
   end
 end
 

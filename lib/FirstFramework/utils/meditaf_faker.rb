@@ -1,7 +1,7 @@
-# FirstFrameworkFaker is a module that provides random fake data for uid codes, random numbers, timestamp  based on the Faker gem
+# MediTAFFaker is a module that provides random fake data for uid codes, random numbers, timestamp  based on the Faker gem
 #
 #*********************************************************************************************************************S**c*#
-require 'FirstFramework/utils/configuration'
+require 'MediTAF/utils/configuration'
 require 'faker'
 
 require 'i18n'
@@ -9,7 +9,7 @@ require 'i18n'
 I18n.enforce_available_locales = true
 I18n.reload!
 
-module FirstFramework
+module MediTAF
   module Utils
     class Base < Faker::Base
 
@@ -26,7 +26,7 @@ module FirstFramework
     end
 
     # TimeStamp: a class that provides the current date time format
-    class FirstFrameworkFaker < Base
+    class MediTAFFaker < Base
       class << self
 
         ##using Faker address

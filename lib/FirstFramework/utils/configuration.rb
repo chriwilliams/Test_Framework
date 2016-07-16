@@ -1,7 +1,7 @@
-require 'FirstFramework/utils/exceptions'
+require 'MediTAF/utils/exceptions'
 
-module FirstFramework
-  # Representation of the FirstFramework_config.yml configuration file.
+module MediTAF
+  # Representation of the MediTAF_config.yml configuration file.
   module Utils
     module Configuration
 
@@ -9,7 +9,7 @@ module FirstFramework
         # @param filepath [String] path/to/file
         # @raise [ConfigurationNotFoundError] when YAML cannot load the file
         def new(filepath = nil)
-          filepath ||= Dir.glob(File.join("**", "FirstFramework_config.yml")).first
+          filepath ||= Dir.glob(File.join("**", "MediTAF_config.yml")).first
           yml_hashes = []
 
           # load main yaml file
@@ -28,7 +28,7 @@ module FirstFramework
           # merge all yml hashes into one hash
           @modules = Settings.new('modules', modules['modules'] )
         rescue Errno::ENOENT => e
-          raise FileNotFound, "missing configuration. check you have FirstFramework_config in the 'config' or " +
+          raise FileNotFound, "missing configuration. check you have MediTAF_config in the 'config' or " +
               "project root directory and is valid."
         rescue Psych::SyntaxError => e
           raise Error, "Configuration Error : #{e}"
@@ -71,7 +71,7 @@ module FirstFramework
       # When the specified configuration file has not configuration items i.e. EMPTY
       class FileEmpty < StandardError; end
 
-      # Specified configuration file or FirstFramework_config.yml file not in config directory or project root directory
+      # Specified configuration file or MediTAF_config.yml file not in config directory or project root directory
       class FileNotFound < StandardError; end
 
       # General configuration error: usually invalid YAML syntax

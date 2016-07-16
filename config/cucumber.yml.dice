@@ -1,4 +1,4 @@
 <% cucumber_tags = configured.cucumber_tags ? "--tags #{configured.cucumber_tags}" : '' %>
 <% cucumber_steps = configured.cucumber_steps ? "-r #{configured.cucumber_steps}" : '' %>
 <% cucumber_format = "--format #{configured.cucumber_format || 'pretty'}" %>
-FirstFramework: <%= cucumber_tags %> <%= cucumber_steps %> <%= cucumber_format %>
+MediTAF: <%= cucumber_tags %> <%= cucumber_steps %> <%= cucumber_format %>

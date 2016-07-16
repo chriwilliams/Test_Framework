@@ -40,7 +40,7 @@ end
 
 # And(/^I Print content (.*) to shamus output$/) do |text|
 #   asset = Shamus.current.current_step.add_inline_asset('.txt', Shamus::Cucumber::InlineAssets::RENDER_AS_TEXT) if defined? Shamus
-#   asset ||= "./FirstFramework_run.log"
+#   asset ||= "./MediTAF_run.log"
 #   File.open(asset, 'w') {|f| f.puts("#{text}")}
 # end
 

@@ -1,13 +1,13 @@
 require 'simplecov'
 SimpleCov.command_name 'Cucumber'
 
-require 'FirstFramework'
+require 'MediTAF'
 require 'capybara'
 require 'site_prism'
 require 'capybara/cucumber'  # This resets Capybara session
 
 AfterConfiguration do
-  $config = FirstFramework::Utils::Configuration.new
+  $config = MediTAF::Utils::Configuration.new
 
   # Configure Capybara
   if $config['ui']['capybara']
@@ -30,10 +30,10 @@ AfterConfiguration do
     config.use_implicit_waits = true
   end
 
-  $applications = FirstFramework::UI.new if $config['ui']
-  $services = FirstFramework::Services.new if $config['services']
-  $faker = FirstFramework::Utils::FirstFrameworkFaker
-  $sticky = FirstFramework::Utils::Sticky.new
+  $applications = MediTAF::UI.new if $config['ui']
+  $services = MediTAF::Services.new if $config['services']
+  $faker = MediTAF::Utils::MediTAFFaker
+  $sticky = MediTAF::Utils::Sticky.new
 end
 
 After do

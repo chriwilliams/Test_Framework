@@ -1,6 +1,6 @@
 require 'euresource'
 
-module FirstFramework
+module MediTAF
   module Services
     module Clients
       # The specific resource adapter for Euresource. It depends on the following configurations
@@ -106,8 +106,8 @@ module FirstFramework
         private
 
         def euresource_config
-          raise ServiceConfigurationMissing, "services not found in configuration" unless FirstFramework::Utils::Configuration['services']
-          FirstFramework::Utils::Configuration['services']['euresource']
+          raise ServiceConfigurationMissing, "services not found in configuration" unless MediTAF::Utils::Configuration['services']
+          MediTAF::Utils::Configuration['services']['euresource']
         end
       end
     end

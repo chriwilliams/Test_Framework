@@ -36,7 +36,7 @@ Given /^I have a "([^"]+)" configuration file with the following values:$/ do |f
 end
 
 When /^I initialize the Utils::Configuration module using the "([^"]+)" configuration file$/ do |fname|
-  @config = FirstFramework::Utils::Configuration.new(fname)
+  @config = MediTAF::Utils::Configuration.new(fname)
 end
 
 Then /^I verify that I have access to the configuration items$/ do |table|
@@ -103,17 +103,17 @@ Given /^I have other configuration files which contain internal collections$/ do
 end
 
 Then /^I should have access to all items in the collections$/ do
-  expect(@config[CFG1_ITEM_A]).to be_a FirstFramework::Utils::Configuration::Settings
+  expect(@config[CFG1_ITEM_A]).to be_a MediTAF::Utils::Configuration::Settings
   expect(@config[CFG1_ITEM_A]).to include CFG2_ITEM_A
   expect(@config[CFG1_ITEM_A]).to include CFG2_ITEM_B
   expect(@config[CFG1_ITEM_A][CFG2_ITEM_A]).to eq CFG2_ITEM_A_VALUE
   expect(@config[CFG1_ITEM_A][CFG2_ITEM_B]).to eq CFG2_ITEM_B_VALUE
   expect(@config[CFG1_ITEM_B]).to eq CFG1_ITEM_B_VALUE
-  expect(@config[CFG1_ITEM_C]).to be_a FirstFramework::Utils::Configuration::Settings
+  expect(@config[CFG1_ITEM_C]).to be_a MediTAF::Utils::Configuration::Settings
   expect(@config[CFG1_ITEM_C]).to include CFG2_ITEM_A
   expect(@config[CFG1_ITEM_C]).to include CFG2_ITEM_B
   expect(@config[CFG1_ITEM_C][CFG2_ITEM_A]).to eq CFG2_ITEM_A_VALUE
-  expect(@config[CFG1_ITEM_C][CFG2_ITEM_B]).to be_a FirstFramework::Utils::Configuration::Settings
+  expect(@config[CFG1_ITEM_C][CFG2_ITEM_B]).to be_a MediTAF::Utils::Configuration::Settings
   expect(@config[CFG1_ITEM_C][CFG2_ITEM_B]).to include CFG3_ITEM_A
   expect(@config[CFG1_ITEM_C][CFG2_ITEM_B][CFG3_ITEM_A]).to eq CFG3_ITEM_A_VALUE
 

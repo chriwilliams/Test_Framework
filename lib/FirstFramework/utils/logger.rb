@@ -1,7 +1,7 @@
 
 require 'logging'
 
-module FirstFramework
+module MediTAF
   module Utils
     # Logging Mechanism based on Logging gem
     module Logger
@@ -30,11 +30,11 @@ module FirstFramework
         # @param classname [Class] the class for which to log
         # @return [Logging::Logger]
         def configure_logger_for(classname)
-          raise LoggingConfigurationMissing, 'logging not found in configuration' unless  FirstFramework::Utils::Configuration['logging']
-          raise LoggingFilePathMissing, 'logging filepath not found in configuration' unless  FirstFramework::Utils::Configuration['logging']['filepath']
-          raise LoggingLevelMissing, 'logging level not found in configuration' unless  FirstFramework::Utils::Configuration['logging']['level']
+          raise LoggingConfigurationMissing, 'logging not found in configuration' unless  MediTAF::Utils::Configuration['logging']
+          raise LoggingFilePathMissing, 'logging filepath not found in configuration' unless  MediTAF::Utils::Configuration['logging']['filepath']
+          raise LoggingLevelMissing, 'logging level not found in configuration' unless  MediTAF::Utils::Configuration['logging']['level']
 
-          config =  FirstFramework::Utils::Configuration['logging']
+          config =  MediTAF::Utils::Configuration['logging']
           log = Logging.logger[classname]
 
           log.add_appenders(

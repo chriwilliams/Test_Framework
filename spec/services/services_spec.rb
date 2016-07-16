@@ -1,10 +1,10 @@
 require_relative '../spec_helper'
 
-describe FirstFramework::Services do
-  subject (:resources) { FirstFramework::Services.new }
+describe MediTAF::Services do
+  subject (:resources) { MediTAF::Services.new }
 
   before (:each) do
-    $config = FirstFramework::Utils::Configuration.new
+    $config = MediTAF::Utils::Configuration.new
     @config = $config['services']
   end
 
@@ -56,11 +56,11 @@ describe FirstFramework::Services do
       end
 
       it 'countries resource should be a Countries object' do
-        expect(multiple_resources.resources[:countries]).to be_an_instance_of FirstFramework::Services::Clients::Countries
+        expect(multiple_resources.resources[:countries]).to be_an_instance_of MediTAF::Services::Clients::Countries
       end
 
       it 'medidations resource should be a Medidations object' do
-        expect(multiple_resources.resources[:medidations]).to be_an_instance_of FirstFramework::Services::Clients::Medidations
+        expect(multiple_resources.resources[:medidations]).to be_an_instance_of MediTAF::Services::Clients::Medidations
       end
 
       it 'should get USA country details' do
@@ -98,17 +98,17 @@ describe FirstFramework::Services do
 
     it 'should raise an error when the adapter is not camelize-able i.e. a_b_adapter to ABAdapter' do
       @config.send :[]=, 'adapters', 'badname'
-      expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterLoadError
+      expect { resources }.to raise_error MediTAF::Services::ResourceAdapterLoadError
     end
 
     it 'should raise an error when the adapter is missing a required method' do
       require_relative './missing_method_adapter'
       @config.send :[]=, 'adapters', 'missing_method'
-      expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterMethodMissing
+      expect { resources }.to raise_error MediTAF::Services::ResourceAdapterMethodMissing
     end
   end
 
-  context FirstFramework::Services::Clients::EuresourceAdapter do
+  context MediTAF::Services::Clients::EuresourceAdapter do
     before (:each) do
       @config.send :[]=, 'adapter_home', nil
       @config.send :[]=, 'adapters', 'euresource'
@@ -124,7 +124,7 @@ describe FirstFramework::Services do
 
     context 'it should' do
       it 'be a EuresourceAdapter object' do
-        expect(resources.adapters[:euresource]).to be_a FirstFramework::Services::Clients::EuresourceAdapter
+        expect(resources.adapters[:euresource]).to be_a MediTAF::Services::Clients::EuresourceAdapter
       end
 
       it 'return a kind of Euresource::Base object' do
@@ -135,28 +135,28 @@ describe FirstFramework::Services do
     context 'when missing configuration items' do
       it 'should raise an error for missing services configuration item' do
         $config.send :delete, 'services'
-        expect { resources }.to raise_error FirstFramework::Services::ServiceConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ServiceConfigurationMissing
       end
 
       it 'should raise an error for missing euresource configuration item' do
         @config.send :[]=, 'euresource', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
 
       it 'should raise an error for missing mauth_url' do
         @config['euresource'].send :[]=, 'mauth_url', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
 
       it 'should raise 2 errors for missing mauth_url and key_file' do
         @config['euresource'].send :[]=, 'mauth_url', nil
         @config['euresource'].send :[]=, 'key_file', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
     end
   end
 
-  context FirstFramework::Services::Clients::MauthAdapter do
+  context MediTAF::Services::Clients::MauthAdapter do
     before (:each) do
       @config.send :[]=, 'adapter_home', nil
       @config.send :[]=, 'adapters', 'mauth'
@@ -171,45 +171,45 @@ describe FirstFramework::Services do
     end
 
     it 'should be a MauthAdapter object' do
-      expect(resources.adapters[:mauth]).to be_an_instance_of FirstFramework::Services::Clients::MauthAdapter
+      expect(resources.adapters[:mauth]).to be_an_instance_of MediTAF::Services::Clients::MauthAdapter
     end
 
     it 'should return a MauthClient object' do
       expect(resources.imedidata(adapter: :mauth, baseurl: 'https://validation.imedidata.net/api/v2')).to \
-        be_an_instance_of FirstFramework::Services::Clients::MauthClient
+        be_an_instance_of MediTAF::Services::Clients::MauthClient
     end
 
     it 'should raise an error when the baseurl is missing' do
-      expect { resources.imedidata(adapter: :mauth) }.to raise_error FirstFramework::Services::Clients::MauthClientBaseURLMissing
+      expect { resources.imedidata(adapter: :mauth) }.to raise_error MediTAF::Services::Clients::MauthClientBaseURLMissing
     end
 
     context 'missing configuration items' do
       it 'should raise an error for missing services configuration item' do
         $config.send(:delete, 'services')
-        expect { resources }.to raise_error FirstFramework::Services::ServiceConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ServiceConfigurationMissing
       end
 
       it 'should raise an error for missing euresource configuration item' do
         @config.send :[]=, 'mauth', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
 
       it 'should raise an error for missing mauth_url' do
         @config['mauth'].send :[]=, 'mauth_url', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
 
       it 'should raise 2 errors for missing mauth_url and key_file' do
         @config['mauth'].send :[]=, 'mauth_url', nil
         @config['mauth'].send :[]=, 'key_file', nil
-        expect { resources }.to raise_error FirstFramework::Services::ResourceAdapterConfigurationMissing
+        expect { resources }.to raise_error MediTAF::Services::ResourceAdapterConfigurationMissing
       end
     end
   end
 
   context 'when multiple adapters are configured' do
     before (:each) do
-      FirstFramework::Services::Clients.send(:remove_const, :EuresourceAdapter)
+      MediTAF::Services::Clients.send(:remove_const, :EuresourceAdapter)
       $LOADED_FEATURES.delete_if { |f| f =~ /euresource_adapter\.rb$/ }
       @config.send :[]=, 'adapter_home', nil
       @config.send :[]=, 'adapters', 'euresource, mauth'
@@ -226,7 +226,7 @@ describe FirstFramework::Services do
 
   context 'when an unknown is referenced' do
     it 'should raise an error' do
-      expect { resources.unknown(adapter: :unknown) }.to raise_error FirstFramework::Services::ResourceAdapterMissing
+      expect { resources.unknown(adapter: :unknown) }.to raise_error MediTAF::Services::ResourceAdapterMissing
     end
   end
 end

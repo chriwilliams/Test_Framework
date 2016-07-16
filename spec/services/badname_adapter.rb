@@ -1,4 +1,4 @@
-module FirstFramework
+module MediTAF
   module Services
     module Clients
       class BadName
