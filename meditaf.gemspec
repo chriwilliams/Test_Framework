@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'MediTAF/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'MediTAF1'
+  spec.name = 'MediTAF2'
   spec.version = MediTAF::VERSION
   spec.authors = ['Medidata Test Automation Framework Team']
   spec.email = ['chriwilliams_23@yahoo.com']
