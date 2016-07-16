@@ -16,6 +16,6 @@ group :test do
   gem 'rspec', '< 4.0'
   gem 'rspec-core', '< 4.0'
   gem 'rspec-expectations', '< 4.0'
-  gem 'MediTAF2', '~> 1.6'
+  gem 'Test_Framework2.0', '~> 1.6'
   #gem 'shamus', :git => "#{github}:mdsol/shamus.git", :tag => '0.11.2'
 end

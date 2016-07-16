@@ -6,7 +6,7 @@
 # each accessed resources exposes the underlying adapter implementation
 
 require 'MediTAF/utils/configuration'
-require 'active_support/core_ext/string/inflections'
+#require 'active_support/core_ext/string/inflections'
 
 module MediTAF
   module Services
